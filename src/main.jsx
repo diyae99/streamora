@@ -28,7 +28,8 @@ import {
 } from 'lucide-react';
 import './styles.css';
 
-const WHATSAPP_NUMBER = '212600000000';
+const WHATSAPP_NUMBER = '212699904956';
+const WHATSAPP_DISPLAY_NUMBER = '0699904956';
 
 const translations = {
   fr: {
@@ -64,14 +65,13 @@ const translations = {
     quality: 'HD',
     visualTags: ['4K', 'Replay', 'VOD'],
     countdown: ['heures', 'minutes', 'secondes'],
-    trustBadges: ['Support 24/7', 'Paiement sécurisé', 'Activation rapide', 'Multi-appareils'],
+    trustBadges: ['Support 24/7', 'Paiement sécurisé', 'Activation rapide'],
     featuresTitle: 'Tout ce dont vous avez besoin pour une expérience premium',
     features: [
       ['20,000+ Programmes en direct', 'Une large sélection de chaînes généralistes, sportives et divertissement pour toute la famille.'],
       ['Qualité HD & 4K', 'Profitez des grands matchs avec une image nette sur écran TV, mobile ou ordinateur.'],
       ['Replay 7 jours', 'Rattrapez vos programmes importants lorsque votre planning ne laisse pas de place.'],
       ['Bibliothèque VOD', 'Films, séries et contenus à la demande dans une interface simple à parcourir.'],
-      ['Support multi-appareils', 'Compatible avec Smart TV, box Android, iOS, PC et applications populaires.'],
       ['Streaming stable sans coupure', 'Infrastructure optimisée pour les grands événements sportifs et les soirées football live.'],
     ],
     devicesTitle: 'Compatible avec tous vos appareils',
@@ -191,14 +191,13 @@ const translations = {
     quality: 'HD',
     visualTags: ['4K', 'إعادة', 'VOD'],
     countdown: ['ساعات', 'دقائق', 'ثواني'],
-    trustBadges: ['دعم 24/7', 'دفع آمن', 'تفعيل سريع', 'عدة أجهزة'],
+    trustBadges: ['دعم 24/7', 'دفع آمن', 'تفعيل سريع'],
     featuresTitle: 'كل ما تحتاجه لتجربة مشاهدة مميزة',
     features: [
       ['20,000+ برنامج مباشر', 'اختيار واسع من القنوات العامة والرياضية والترفيهية المناسبة لكل أفراد العائلة.'],
       ['جودة HD و4K', 'استمتع بالمباريات الكبرى بصورة واضحة على التلفاز أو الهاتف أو الكمبيوتر.'],
       ['إعادة لمدة 7 أيام', 'شاهد برامجك المهمة لاحقا عندما لا يناسبك وقت العرض.'],
       ['مكتبة VOD', 'أفلام ومسلسلات ومحتوى حسب الطلب داخل واجهة سهلة التصفح.'],
-      ['دعم عدة أجهزة', 'متوافق مع Smart TV وAndroid Box وiOS والكمبيوتر والتطبيقات الشائعة.'],
       ['بث مستقر بدون انقطاع', 'بنية محسنة للأحداث الرياضية الكبرى وسهرات football live.'],
     ],
     devicesTitle: 'متوافق مع جميع أجهزتك',
@@ -287,9 +286,9 @@ const translations = {
   },
 };
 
-const featureIcons = [Tv, Sparkles, Clock3, PlayCircle, Laptop, Wifi];
+const featureIcons = [Tv, Sparkles, Clock3, PlayCircle, Wifi];
 const deviceIcons = [Tv, Monitor, TabletSmartphone, Smartphone, Laptop, Monitor, Tv, PlayCircle];
-const trustIcons = [Headphones, ShieldCheck, Zap, TabletSmartphone];
+const trustIcons = [Headphones, ShieldCheck, Zap];
 const reasonIcons = [Wifi, Headphones, ShieldCheck, BadgeCheck, CircleDollarSign, Star];
 const reasonColors = ['red', 'green', 'green', 'red', 'green', 'red'];
 const paymentIcons = [CreditCard, Wallet, Banknote, CircleDollarSign];
@@ -499,7 +498,7 @@ function Hero({ lang, t }) {
             <Countdown labels={t.countdown} compact />
           </div>
 
-          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
             {t.trustBadges.map((label, index) => {
               const Icon = trustIcons[index];
               return (
@@ -732,6 +731,7 @@ function Footer({ t }) {
         <div>
           <h3 className="font-black">{t.footerContact}</h3>
           <p className="mt-4 leading-7 text-white/70">{t.footerContactText}</p>
+          <p className="mt-2 font-black text-white">{WHATSAPP_DISPLAY_NUMBER}</p>
           <a className="btn btn-green mt-5" href={createWhatsAppUrl(t.whatsapp.contact)} target="_blank" rel="noreferrer">
             {t.footerContactCta}
           </a>
