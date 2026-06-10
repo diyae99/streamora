@@ -30,12 +30,19 @@ import './styles.css';
 
 const WHATSAPP_NUMBER = '212699904956';
 const WHATSAPP_DISPLAY_NUMBER = '0699904956';
+const SITE_URL = 'https://streamora-nine.vercel.app/';
+const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const translations = {
   fr: {
     dir: 'ltr',
     locale: 'fr',
+    ogLocale: 'fr_MA',
     brand: 'Streamora',
+    seoTitle: 'Streamora | Abonnement TV en ligne au Maroc',
+    seoDescription: 'Abonnement TV en ligne au Maroc avec activation rapide, support WhatsApp TV Maroc et accès compatible Smart TV, mobile et ordinateur.',
+    seoKeywords: 'abonnement TV Maroc, service TV en ligne Maroc, activation rapide TV, support WhatsApp TV Maroc, application TV Maroc, regarder TV en ligne Maroc, abonnement streaming Maroc',
+    structuredDescription: 'Abonnement TV en ligne au Maroc avec activation rapide et support WhatsApp.',
     nav: [
       { label: 'Accueil', href: '#accueil' },
       { label: 'Fonctionnalités', href: '#fonctionnalites' },
@@ -51,9 +58,9 @@ const translations = {
     mobileClose: 'Fermer le menu',
     navAria: 'Navigation principale',
     whatsappAria: 'Contacter sur WhatsApp',
-    heroBadge: 'Offre pensée pour les grands matchs',
-    heroTitle: 'Streamora — Vos grands matchs et divertissements en direct',
-    heroSubtitle: 'Une expérience stable, rapide et compatible avec Smart TV, Android, iOS, PC et applications populaires.',
+    heroBadge: 'Abonnement TV Maroc avec activation rapide',
+    heroTitle: 'Streamora — Abonnement TV en ligne au Maroc pour vos grands matchs',
+    heroSubtitle: 'Un service TV en ligne Maroc stable, rapide et compatible avec Smart TV, Android, iOS, PC et applications populaires.',
     heroPrimaryCta: 'Commencer maintenant',
     heroTrialCta: 'Demander un essai 24h',
     heroPromoTitle: 'Offre spéciale football',
@@ -61,22 +68,23 @@ const translations = {
     visualBadgeTop: 'Football live',
     visualBadgeBottom: 'Soirée match',
     visualFast: 'Activation rapide',
+    visualAlt: 'Illustration Streamora montrant une expérience TV en ligne pour football live et divertissement',
     live: 'LIVE',
     quality: 'HD',
     visualTags: ['4K', 'Replay', 'VOD'],
     countdown: ['heures', 'minutes', 'secondes'],
     trustBadges: ['Support 24/7', 'Paiement sécurisé', 'Activation rapide'],
-    featuresTitle: 'Tout ce dont vous avez besoin pour une expérience premium',
+    featuresTitle: 'Un service TV en ligne Maroc simple, stable et premium',
     features: [
-      ['20,000+ Programmes en direct', 'Une large sélection de chaînes généralistes, sportives et divertissement pour toute la famille.'],
+      ['20,000+ Programmes en direct', 'Une large sélection de programmes généralistes, sportives et divertissement pour regarder TV en ligne Maroc en toute simplicité.'],
       ['Qualité HD & 4K', 'Profitez des grands matchs avec une image nette sur écran TV, mobile ou ordinateur.'],
       ['Replay 7 jours', 'Rattrapez vos programmes importants lorsque votre planning ne laisse pas de place.'],
       ['Bibliothèque VOD', 'Films, séries et contenus à la demande dans une interface simple à parcourir.'],
-      ['Streaming stable sans coupure', 'Infrastructure optimisée pour les grands événements sportifs et les soirées football live.'],
+      ['Streaming stable sans coupure', 'Infrastructure optimisée pour les grands événements sportifs, les soirées football live et votre abonnement streaming Maroc.'],
     ],
-    devicesTitle: 'Compatible avec tous vos appareils',
+    devicesTitle: 'Application TV Maroc compatible avec vos appareils',
     devices: ['Smart TV', 'Android TV / Box', 'iPhone & iPad', 'Android Mobile', 'Windows & Mac', 'Fire TV Stick', 'MAG / Formuler', 'Applications populaires'],
-    pricingTitle: 'Choisissez votre abonnement Streamora',
+    pricingTitle: 'Choisissez votre abonnement TV Maroc',
     pricingSubtitle: 'Des forfaits simples, transparents et sans frais cachés.',
     popular: 'Populaire',
     planCta: 'Choisir cette offre',
@@ -113,12 +121,12 @@ const translations = {
     ],
     promoEyebrow: 'Promotion spéciale limitée',
     promoTitle: 'Promotion spéciale limitée',
-    promoText: 'Profitez d’une activation rapide et d’un support personnalisé pendant les grands événements sportifs.',
+    promoText: 'Profitez d’une activation rapide TV et d’un support personnalisé pendant les grands événements sportifs.',
     promoCta: 'Profiter de l’offre',
     reasonsTitle: 'Pourquoi choisir Streamora ?',
     reasons: [
       ['Serveurs stables', 'Conçus pour garder une expérience fluide pendant les grands rendez-vous.'],
-      ['Support 24/7', 'Assistance rapide par WhatsApp pour l’installation et les questions courantes.'],
+      ['Support 24/7', 'Assistance rapide par WhatsApp pour l’installation et les questions courantes avec support WhatsApp TV Maroc.'],
       ['Paiement sécurisé', 'Des options simples, lisibles et sans collecte inutile dans cette interface.'],
       ['Installation assistée', 'Nous vous guidons selon votre appareil et votre application préférée.'],
       ['Sans engagement', 'Des forfaits clairs pour choisir la durée qui vous convient.'],
@@ -129,18 +137,19 @@ const translations = {
     paymentText: 'Interface de présentation uniquement. Aucun paiement réel n’est traité sur cette page.',
     paymentMethods: ['Carte bancaire', 'PayPal', 'Virement bancaire', 'Paiement local'],
     trialTitle: 'Prêt pour tester notre service ?',
-    trialText: 'Demandez votre essai gratuit 24h et vérifiez la qualité avant de vous abonner.',
+    trialText: 'Demandez votre essai gratuit 24h et vérifiez la qualité de votre abonnement TV Maroc avant de vous abonner.',
     trialCta: 'Demander un essai 24h maintenant',
     faqTitle: 'Questions fréquentes',
     faqs: [
-      ['Comment recevoir mon accès Streamora ?', 'Après votre demande WhatsApp, notre équipe confirme votre offre et vous envoie les informations d’accès avec les étapes d’installation adaptées à votre appareil.'],
-      ['Quels appareils sont compatibles ?', 'Le service fonctionne avec Smart TV, Android TV, box Android, iPhone, iPad, Android mobile, Windows, Mac, Fire TV Stick, MAG, Formuler et plusieurs applications populaires.'],
-      ['Combien de temps prend l’activation ?', 'L’activation est généralement rapide après confirmation. Notre support vous accompagne pour lancer le service dans les meilleures conditions.'],
+      ['Comment activer mon abonnement ?', 'Après votre demande WhatsApp, notre équipe confirme votre offre et lance l’activation rapide TV avec les informations d’accès adaptées à votre appareil.'],
+      ['Est-ce que le service fonctionne sur Smart TV ?', 'Oui, Streamora fonctionne sur Smart TV, Android TV, box Android, iPhone, iPad, Android mobile, Windows, Mac, Fire TV Stick, MAG, Formuler et plusieurs applications populaires.'],
+      ['Combien de temps prend l’activation ?', 'L’activation est généralement rapide après confirmation. Notre support WhatsApp TV Maroc vous accompagne pour lancer le service dans les meilleures conditions.'],
       ['Est-ce que je peux tester avant de payer ?', 'Oui, vous pouvez demander un essai gratuit 24h afin de vérifier la stabilité, la qualité d’image et la compatibilité avec votre appareil.'],
+      ['Quelle application TV Maroc puis-je utiliser ?', 'Notre équipe vous guide vers une application compatible selon votre appareil afin de regarder TV en ligne Maroc facilement.'],
       ['Que faire si j’ai besoin d’aide pour l’installation ?', 'Contactez-nous sur WhatsApp. Nous vous guidons pas à pas selon votre TV, box, mobile, ordinateur ou application.'],
       ['Y a-t-il des frais cachés ?', 'Non. Les forfaits sont présentés clairement, sans frais cachés dans cette offre commerciale.'],
     ],
-    footerDescription: 'Expérience premium, stable et compatible avec vos appareils du quotidien pour suivre football live, divertissements et événements sportifs internationaux.',
+    footerDescription: 'Expérience premium, stable et compatible avec vos appareils du quotidien pour suivre football live, divertissements et événements sportifs internationaux avec un abonnement TV Maroc clair.',
     legalNote: 'Service proposé dans le respect des droits et réglementations applicables. Le client doit s’assurer de l’usage légal du service dans son pays.',
     quickLinks: 'Liens rapides',
     footerContact: 'Contact / WhatsApp',
@@ -161,7 +170,12 @@ const translations = {
   ar: {
     dir: 'rtl',
     locale: 'ar',
+    ogLocale: 'ar_MA',
     brand: 'Streamora',
+    seoTitle: 'Streamora | اشتراك مشاهدة عبر الإنترنت في المغرب',
+    seoDescription: 'اشتراك مشاهدة عبر الإنترنت في المغرب مع تفعيل سريع ودعم واتساب وخدمة متوافقة مع Smart TV والهاتف والكمبيوتر.',
+    seoKeywords: 'اشتراك مشاهدة المغرب, خدمة تلفاز عبر الإنترنت, تفعيل سريع, دعم واتساب, تطبيق مشاهدة للمغرب, مشاهدة عبر الإنترنت في المغرب',
+    structuredDescription: 'اشتراك مشاهدة عبر الإنترنت في المغرب مع تفعيل سريع ودعم عبر واتساب.',
     nav: [
       { label: 'الرئيسية', href: '#accueil' },
       { label: 'المميزات', href: '#fonctionnalites' },
@@ -177,9 +191,9 @@ const translations = {
     mobileClose: 'إغلاق القائمة',
     navAria: 'التنقل الرئيسي',
     whatsappAria: 'تواصل عبر واتساب',
-    heroBadge: 'عرض مصمم لمتابعة المباريات الكبرى',
-    heroTitle: 'Streamora — مبارياتك الكبرى وترفيهك المباشر',
-    heroSubtitle: 'تجربة مستقرة وسريعة ومتوافقة مع Smart TV وAndroid وiOS والكمبيوتر والتطبيقات الشائعة.',
+    heroBadge: 'اشتراك مشاهدة المغرب مع تفعيل سريع',
+    heroTitle: 'Streamora — اشتراك مشاهدة عبر الإنترنت في المغرب للمباريات الكبرى',
+    heroSubtitle: 'خدمة تلفاز عبر الإنترنت مستقرة وسريعة ومتوافقة مع Smart TV وAndroid وiOS والكمبيوتر والتطبيقات الشائعة.',
     heroPrimaryCta: 'ابدأ الآن',
     heroTrialCta: 'اطلب تجربة 24 ساعة',
     heroPromoTitle: 'عرض خاص لكرة القدم',
@@ -187,22 +201,23 @@ const translations = {
     visualBadgeTop: 'كرة قدم مباشرة',
     visualBadgeBottom: 'ليلة المباراة',
     visualFast: 'تفعيل سريع',
+    visualAlt: 'رسم توضيحي من Streamora لتجربة مشاهدة عبر الإنترنت لكرة القدم والترفيه',
     live: 'مباشر',
     quality: 'HD',
     visualTags: ['4K', 'إعادة', 'VOD'],
     countdown: ['ساعات', 'دقائق', 'ثواني'],
     trustBadges: ['دعم 24/7', 'دفع آمن', 'تفعيل سريع'],
-    featuresTitle: 'كل ما تحتاجه لتجربة مشاهدة مميزة',
+    featuresTitle: 'خدمة تلفاز عبر الإنترنت مستقرة وسهلة الاستخدام',
     features: [
-      ['20,000+ برنامج مباشر', 'اختيار واسع من القنوات العامة والرياضية والترفيهية المناسبة لكل أفراد العائلة.'],
+      ['20,000+ برنامج مباشر', 'اختيار واسع من البرامج العامة والرياضية والترفيهية لتجربة مشاهدة عبر الإنترنت في المغرب.'],
       ['جودة HD و4K', 'استمتع بالمباريات الكبرى بصورة واضحة على التلفاز أو الهاتف أو الكمبيوتر.'],
       ['إعادة لمدة 7 أيام', 'شاهد برامجك المهمة لاحقا عندما لا يناسبك وقت العرض.'],
       ['مكتبة VOD', 'أفلام ومسلسلات ومحتوى حسب الطلب داخل واجهة سهلة التصفح.'],
-      ['بث مستقر بدون انقطاع', 'بنية محسنة للأحداث الرياضية الكبرى وسهرات football live.'],
+      ['بث مستقر بدون انقطاع', 'بنية محسنة للأحداث الرياضية الكبرى وسهرات football live مع تفعيل سريع.'],
     ],
-    devicesTitle: 'متوافق مع جميع أجهزتك',
+    devicesTitle: 'تطبيق مشاهدة للمغرب متوافق مع أجهزتك',
     devices: ['Smart TV', 'Android TV / Box', 'iPhone وiPad', 'Android Mobile', 'Windows وMac', 'Fire TV Stick', 'MAG / Formuler', 'تطبيقات شائعة'],
-    pricingTitle: 'اختر اشتراك Streamora المناسب لك',
+    pricingTitle: 'اختر اشتراك مشاهدة المغرب المناسب لك',
     pricingSubtitle: 'باقات بسيطة وواضحة وبدون رسوم مخفية.',
     popular: 'الأكثر طلبا',
     planCta: 'اختر هذا العرض',
@@ -239,12 +254,12 @@ const translations = {
     ],
     promoEyebrow: 'عرض محدود خاص',
     promoTitle: 'عرض خاص لفترة محدودة',
-    promoText: 'استفد من تفعيل سريع ودعم مخصص أثناء الأحداث الرياضية الكبرى.',
+    promoText: 'استفد من تفعيل سريع ودعم واتساب مخصص أثناء الأحداث الرياضية الكبرى.',
     promoCta: 'استفد من العرض',
     reasonsTitle: 'لماذا تختار Streamora؟',
     reasons: [
       ['خوادم مستقرة', 'مصممة للحفاظ على تجربة سلسة أثناء المواعيد الكبرى.'],
-      ['دعم 24/7', 'مساعدة سريعة عبر واتساب للتثبيت والأسئلة اليومية.'],
+      ['دعم 24/7', 'مساعدة سريعة عبر واتساب للتثبيت والأسئلة اليومية مع دعم واتساب واضح.'],
       ['دفع آمن', 'خيارات بسيطة وواضحة بدون جمع بيانات غير ضرورية داخل هذه الواجهة.'],
       ['مساعدة في التثبيت', 'نرشدك حسب جهازك والتطبيق الذي تفضله.'],
       ['بدون التزام', 'باقات واضحة لاختيار المدة المناسبة لك.'],
@@ -255,18 +270,19 @@ const translations = {
     paymentText: 'هذه واجهة عرض فقط. لا تتم معالجة أي دفع حقيقي في هذه الصفحة.',
     paymentMethods: ['بطاقة بنكية', 'PayPal', 'تحويل بنكي', 'دفع محلي'],
     trialTitle: 'جاهز لتجربة الخدمة؟',
-    trialText: 'اطلب تجربة مجانية 24 ساعة وتأكد من الجودة قبل الاشتراك.',
+    trialText: 'اطلب تجربة مجانية 24 ساعة وتأكد من جودة اشتراك مشاهدة المغرب قبل الاشتراك.',
     trialCta: 'اطلب تجربة 24 ساعة الآن',
     faqTitle: 'الأسئلة الشائعة',
     faqs: [
-      ['كيف أستلم وصول Streamora؟', 'بعد طلبك عبر واتساب، يؤكد فريقنا العرض ويرسل لك معلومات الوصول مع خطوات التثبيت المناسبة لجهازك.'],
-      ['ما الأجهزة المتوافقة؟', 'الخدمة تعمل مع Smart TV وAndroid TV وAndroid Box وiPhone وiPad وAndroid Mobile وWindows وMac وFire TV Stick وMAG وFormuler وعدة تطبيقات شائعة.'],
-      ['كم يستغرق التفعيل؟', 'عادة يتم التفعيل بسرعة بعد التأكيد. يساعدك الدعم على تشغيل الخدمة في أفضل الظروف.'],
-      ['هل يمكنني التجربة قبل الدفع؟', 'نعم، يمكنك طلب تجربة مجانية 24 ساعة للتحقق من الاستقرار وجودة الصورة والتوافق مع جهازك.'],
+      ['هل التفعيل سريع؟', 'نعم، بعد تأكيد الطلب يتم تفعيل سريع وإرسال معلومات الوصول المناسبة لجهازك عبر واتساب.'],
+      ['هل يوجد دعم عبر واتساب؟', 'نعم، يوفر Streamora دعم واتساب للمساعدة في التثبيت والأسئلة المتعلقة بالخدمة.'],
+      ['هل يمكن التجربة قبل الاشتراك؟', 'نعم، يمكنك طلب تجربة مجانية 24 ساعة للتحقق من الاستقرار وجودة الصورة قبل الاشتراك.'],
+      ['هل تعمل الخدمة على Smart TV؟', 'نعم، الخدمة تعمل مع Smart TV وAndroid TV وAndroid Box وiPhone وiPad وAndroid Mobile وWindows وMac وFire TV Stick وMAG وFormuler وعدة تطبيقات شائعة.'],
+      ['ما هو تطبيق مشاهدة للمغرب المناسب؟', 'نرشدك إلى تطبيق متوافق حسب جهازك حتى تتمكن من مشاهدة عبر الإنترنت في المغرب بسهولة.'],
       ['ماذا أفعل إذا احتجت مساعدة في التثبيت؟', 'تواصل معنا عبر واتساب. نرشدك خطوة بخطوة حسب التلفاز أو الجهاز أو الهاتف أو الكمبيوتر أو التطبيق.'],
       ['هل توجد رسوم مخفية؟', 'لا. الباقات معروضة بوضوح وبدون رسوم مخفية في هذا العرض التجاري.'],
     ],
-    footerDescription: 'تجربة مميزة ومستقرة ومتوافقة مع أجهزتك اليومية لمتابعة football live والترفيه والأحداث الرياضية الدولية.',
+    footerDescription: 'تجربة مميزة ومستقرة ومتوافقة مع أجهزتك اليومية لمتابعة football live والترفيه والأحداث الرياضية الدولية ضمن اشتراك مشاهدة المغرب واضح.',
     legalNote: 'تُقدم الخدمة مع احترام الحقوق والقوانين المعمول بها. يجب على العميل التأكد من الاستخدام القانوني للخدمة في بلده.',
     quickLinks: 'روابط سريعة',
     footerContact: 'التواصل / واتساب',
@@ -295,6 +311,109 @@ const paymentIcons = [CreditCard, Wallet, Banknote, CircleDollarSign];
 
 function createWhatsAppUrl(message) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}
+
+function setMetaTag(attribute, key, content) {
+  let tag = document.head.querySelector(`meta[${attribute}="${key}"]`);
+
+  if (!tag) {
+    tag = document.createElement('meta');
+    tag.setAttribute(attribute, key);
+    document.head.appendChild(tag);
+  }
+
+  tag.setAttribute('content', content);
+}
+
+function setLinkTag(rel, href, hreflang) {
+  const selector = hreflang ? `link[rel="${rel}"][hreflang="${hreflang}"]` : `link[rel="${rel}"]`;
+  let tag = document.head.querySelector(selector);
+
+  if (!tag) {
+    tag = document.createElement('link');
+    tag.setAttribute('rel', rel);
+    if (hreflang) tag.setAttribute('hreflang', hreflang);
+    document.head.appendChild(tag);
+  }
+
+  tag.setAttribute('href', href);
+}
+
+function setJsonLd(t) {
+  const data = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': `${SITE_URL}#organization`,
+        name: 'Streamora',
+        url: SITE_URL,
+        description: t.structuredDescription,
+        contactPoint: {
+          '@type': 'ContactPoint',
+          telephone: WHATSAPP_DISPLAY_NUMBER,
+          contactType: 'customer support',
+          availableLanguage: ['French', 'Arabic'],
+          url: WHATSAPP_URL,
+        },
+      },
+      {
+        '@type': 'WebSite',
+        '@id': `${SITE_URL}#website`,
+        url: SITE_URL,
+        name: 'Streamora',
+        description: t.structuredDescription,
+        inLanguage: t.locale,
+        publisher: {
+          '@id': `${SITE_URL}#organization`,
+        },
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${SITE_URL}#faq`,
+        inLanguage: t.locale,
+        mainEntity: t.faqs.map(([question, answer]) => ({
+          '@type': 'Question',
+          name: question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: answer,
+          },
+        })),
+      },
+    ],
+  };
+  let script = document.getElementById('streamora-jsonld');
+
+  if (!script) {
+    script = document.createElement('script');
+    script.id = 'streamora-jsonld';
+    script.type = 'application/ld+json';
+    document.head.appendChild(script);
+  }
+
+  script.textContent = JSON.stringify(data);
+}
+
+function updateSeo(t) {
+  document.title = t.seoTitle;
+  setMetaTag('name', 'description', t.seoDescription);
+  setMetaTag('name', 'keywords', t.seoKeywords);
+  setMetaTag('name', 'robots', 'index, follow');
+  setMetaTag('property', 'og:type', 'website');
+  setMetaTag('property', 'og:site_name', 'Streamora');
+  setMetaTag('property', 'og:title', t.seoTitle);
+  setMetaTag('property', 'og:description', t.seoDescription);
+  setMetaTag('property', 'og:url', SITE_URL);
+  setMetaTag('property', 'og:locale', t.ogLocale);
+  setMetaTag('name', 'twitter:card', 'summary');
+  setMetaTag('name', 'twitter:title', t.seoTitle);
+  setMetaTag('name', 'twitter:description', t.seoDescription);
+  setLinkTag('canonical', SITE_URL);
+  setLinkTag('alternate', SITE_URL, 'fr-MA');
+  setLinkTag('alternate', SITE_URL, 'ar-MA');
+  setLinkTag('alternate', SITE_URL, 'x-default');
+  setJsonLd(t);
 }
 
 function useCountdown(initialSeconds = 4 * 60 * 60) {
@@ -432,7 +551,7 @@ function Header({ lang, setLang, t }) {
 
 function HeroVisual({ t }) {
   return (
-    <div className="relative mx-auto w-full max-w-xl animate-float" dir="ltr">
+    <div className="relative mx-auto w-full max-w-xl animate-float" dir="ltr" role="img" aria-label={t.visualAlt}>
       <div className="absolute -left-4 top-16 z-10 rounded-2xl bg-white px-4 py-3 shadow-soft ring-1 ring-slate-200">
         <p className="text-xs font-black uppercase tracking-[0.12em] text-muted">{t.visualBadgeTop}</p>
         <p className="text-sm font-black text-navy">{t.visualBadgeBottom}</p>
@@ -768,8 +887,9 @@ function App() {
   useEffect(() => {
     document.documentElement.lang = t.locale;
     document.documentElement.dir = t.dir;
+    updateSeo(t);
     localStorage.setItem('streamora-lang', lang);
-  }, [lang, t.dir, t.locale]);
+  }, [lang, t]);
 
   return (
     <>
