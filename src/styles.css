@@ -70,7 +70,7 @@
   }
 
   .pricing-card-popular {
-    @apply border-primary shadow-lift ring-4 ring-red-100;
+    @apply border-primary pt-12 shadow-lift ring-4 ring-red-100;
   }
 
   .popular-pill {

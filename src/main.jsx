@@ -32,29 +32,22 @@ const WHATSAPP_DISPLAY_NUMBER = '+212 699 904 956';
 const DEFAULT_WHATSAPP_MESSAGE = 'Bonjour Stramify, je souhaite bénéficier de l’essai 24h gratuit.';
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 
-const cityLinks = [
-  { label: 'Tanger', href: '/iptv-tanger' },
-  { label: 'Casablanca', href: '/iptv-casablanca' },
-  { label: 'Rabat', href: '/iptv-rabat' },
-  { label: 'Marrakech', href: '/iptv-marrakech' },
-];
-
-const footerLinks = [
-  { label: 'Accueil', href: '/' },
-  { label: 'Tarifs', href: '/tarifs' },
-  { label: 'Installation', href: '/installation' },
-  { label: 'FAQ', href: '/faq' },
-  { label: 'Contact', href: '/contact' },
-  { label: 'Abonnement TV Maroc', href: '/abonnement-tv-maroc' },
-  { label: 'IPTV Maroc', href: '/iptv-maroc' },
-  { label: 'IPTV Tanger', href: '/iptv-tanger' },
-  { label: 'IPTV Casablanca', href: '/iptv-casablanca' },
-  { label: 'IPTV Rabat', href: '/iptv-rabat' },
-  { label: 'IPTV Marrakech', href: '/iptv-marrakech' },
-  { label: 'Politique de confidentialité', href: '/politique-de-confidentialite' },
-  { label: 'Conditions d’utilisation', href: '/conditions-utilisation' },
-  { label: 'Politique de remboursement', href: '/politique-remboursement' },
-];
+const routeHrefs = {
+  home: '/',
+  pricing: '/tarifs',
+  installation: '/installation',
+  faq: '/faq',
+  contact: '/contact',
+  abonnement: '/abonnement-tv-maroc',
+  iptvMaroc: '/iptv-maroc',
+  iptvTanger: '/iptv-tanger',
+  iptvCasablanca: '/iptv-casablanca',
+  iptvRabat: '/iptv-rabat',
+  iptvMarrakech: '/iptv-marrakech',
+  privacy: '/politique-de-confidentialite',
+  terms: '/conditions-utilisation',
+  refund: '/politique-remboursement',
+};
 
 const translations = {
   fr: {
@@ -82,6 +75,7 @@ const translations = {
     heroPromoTitle: 'Activation rapide',
     heroPromoText: 'Support WhatsApp 24/7 pour vous guider',
     visualAlt: 'Stramify abonnement TV en ligne au Maroc compatible Smart TV',
+    visualLabels: ['Smart TV', 'Replay', 'Support'],
     countdown: ['heures', 'minutes', 'secondes'],
     badges: ['Essai 24h', 'Activation rapide', 'Support WhatsApp 24/7', 'Compatible Smart TV'],
     featuresTitle: 'Une solution TV en ligne pensée pour les utilisateurs au Maroc',
@@ -118,6 +112,39 @@ const translations = {
     footerDescription: 'Stramify est une solution TV en ligne au Maroc avec essai 24h via WhatsApp, activation rapide et assistance d’installation.',
     legalNotice: 'Stramify fournit une assistance de configuration et un accès à des services TV selon les offres disponibles. Les contenus et chaînes peuvent varier selon le fournisseur, le pays et les droits de diffusion.',
     copyright: 'Tous droits réservés.',
+    faqAllCta: 'Voir toutes les questions',
+    footerQuick: 'Liens rapides',
+    footerInfo: 'Informations',
+    cityLinks: [
+      { label: 'Tanger', href: routeHrefs.iptvTanger },
+      { label: 'Casablanca', href: routeHrefs.iptvCasablanca },
+      { label: 'Rabat', href: routeHrefs.iptvRabat },
+      { label: 'Marrakech', href: routeHrefs.iptvMarrakech },
+    ],
+    footerLinks: [
+      { label: 'Accueil', href: routeHrefs.home },
+      { label: 'Tarifs', href: routeHrefs.pricing },
+      { label: 'Installation', href: routeHrefs.installation },
+      { label: 'FAQ', href: routeHrefs.faq },
+      { label: 'Contact', href: routeHrefs.contact },
+      { label: 'Abonnement TV Maroc', href: routeHrefs.abonnement },
+      { label: 'IPTV Maroc', href: routeHrefs.iptvMaroc },
+      { label: 'IPTV Tanger', href: routeHrefs.iptvTanger },
+      { label: 'IPTV Casablanca', href: routeHrefs.iptvCasablanca },
+      { label: 'IPTV Rabat', href: routeHrefs.iptvRabat },
+      { label: 'IPTV Marrakech', href: routeHrefs.iptvMarrakech },
+      { label: 'Politique de confidentialité', href: routeHrefs.privacy },
+      { label: 'Conditions d’utilisation', href: routeHrefs.terms },
+      { label: 'Politique de remboursement', href: routeHrefs.refund },
+    ],
+    internalLinks: [
+      { label: 'Tarifs', href: routeHrefs.pricing },
+      { label: 'Installation', href: routeHrefs.installation },
+      { label: 'FAQ', href: routeHrefs.faq },
+      { label: 'Contact', href: routeHrefs.contact },
+    ],
+    contactWhatsApp: 'Contacter WhatsApp',
+    whatsappMessage: DEFAULT_WHATSAPP_MESSAGE,
   },
   ar: {
     dir: 'rtl',
@@ -144,6 +171,7 @@ const translations = {
     heroPromoTitle: 'تفعيل سريع',
     heroPromoText: 'دعم واتساب 24/7 لمساعدتك',
     visualAlt: 'Stramify اشتراك مشاهدة عبر الإنترنت في المغرب متوافق مع Smart TV',
+    visualLabels: ['Smart TV', 'إعادة', 'الدعم'],
     countdown: ['ساعات', 'دقائق', 'ثواني'],
     badges: ['تجربة 24 ساعة', 'تفعيل سريع', 'دعم واتساب 24/7', 'متوافق مع Smart TV'],
     featuresTitle: 'حل مشاهدة منظم وواضح للمستخدمين في المغرب',
@@ -157,7 +185,7 @@ const translations = {
     devicesTitle: 'متوافق مع أجهزتك اليومية',
     devices: ['Smart TV', 'Android TV / Box', 'Firestick', 'iPhone وiPad', 'Android Mobile', 'Windows وMac'],
     pricingTitle: 'باقات Stramify',
-    pricingSubtitle: 'عروض واضحة حسب الاستخدام والاتصال والأجهزة.',
+    pricingSubtitle: 'قارن بين باقات Stramify حسب عدد الأجهزة، سرعة الاتصال واحتياجاتك في الاستعمال والدعم.',
     pricingNote: 'اختيار الباقة يعتمد على عدد الأجهزة وسرعة الإنترنت واحتياجات الاستخدام.',
     popular: 'الأكثر طلبا',
     planCta: 'اطلب هذا العرض',
@@ -180,46 +208,167 @@ const translations = {
     footerDescription: 'Stramify حل مشاهدة عبر الإنترنت في المغرب مع تجربة 24 ساعة عبر واتساب وتفعيل سريع ومساعدة في التثبيت.',
     legalNotice: 'يوفر Stramify مساعدة في الإعداد ووصولا إلى خدمات TV حسب العروض المتاحة. قد تختلف المحتويات والقنوات حسب المورد والبلد وحقوق البث.',
     copyright: 'جميع الحقوق محفوظة.',
+    faqAllCta: 'عرض كل الأسئلة',
+    footerQuick: 'روابط سريعة',
+    footerInfo: 'معلومات',
+    cityLinks: [
+      { label: 'طنجة', href: routeHrefs.iptvTanger },
+      { label: 'الدار البيضاء', href: routeHrefs.iptvCasablanca },
+      { label: 'الرباط', href: routeHrefs.iptvRabat },
+      { label: 'مراكش', href: routeHrefs.iptvMarrakech },
+    ],
+    footerLinks: [
+      { label: 'الرئيسية', href: routeHrefs.home },
+      { label: 'الأسعار', href: routeHrefs.pricing },
+      { label: 'التثبيت', href: routeHrefs.installation },
+      { label: 'الأسئلة', href: routeHrefs.faq },
+      { label: 'اتصل بنا', href: routeHrefs.contact },
+      { label: 'اشتراك TV المغرب', href: routeHrefs.abonnement },
+      { label: 'IPTV المغرب', href: routeHrefs.iptvMaroc },
+      { label: 'IPTV طنجة', href: routeHrefs.iptvTanger },
+      { label: 'IPTV الدار البيضاء', href: routeHrefs.iptvCasablanca },
+      { label: 'IPTV الرباط', href: routeHrefs.iptvRabat },
+      { label: 'IPTV مراكش', href: routeHrefs.iptvMarrakech },
+      { label: 'سياسة الخصوصية', href: routeHrefs.privacy },
+      { label: 'شروط الاستخدام', href: routeHrefs.terms },
+      { label: 'سياسة الاسترجاع', href: routeHrefs.refund },
+    ],
+    internalLinks: [
+      { label: 'الأسعار', href: routeHrefs.pricing },
+      { label: 'التثبيت', href: routeHrefs.installation },
+      { label: 'الأسئلة', href: routeHrefs.faq },
+      { label: 'اتصل بنا', href: routeHrefs.contact },
+    ],
+    contactWhatsApp: 'تواصل عبر WhatsApp',
+    whatsappMessage: 'مرحبا Stramify، أريد الاستفادة من تجربة 24 ساعة المجانية.',
   },
 };
 
-const pricingPlans = [
-  {
-    name: 'Stramify Start',
-    price: '200 DH',
-    period: '/ an',
-    tag: 'Pour commencer',
-    features: ['1 appareil', 'Qualité HD / Full HD selon connexion', 'Activation rapide via WhatsApp', 'Support installation', 'Accès 12 mois'],
-  },
-  {
-    name: 'Stramify Plus',
-    price: '300 DH',
-    period: '/ an',
-    tag: 'Le plus demandé',
-    highlighted: true,
-    features: ['Jusqu’à 2 appareils', 'Qualité Full HD / 4K selon compatibilité', 'Replay selon disponibilité', 'Assistance prioritaire', 'Accès 12 mois'],
-  },
-  {
-    name: 'Stramify Premium',
-    price: '500 DH',
-    period: '/ an',
-    tag: 'Expérience complète',
-    features: ['Offre complète', 'Qualité optimale selon appareil', 'Support prioritaire', 'Configuration personnalisée', 'Accès 12 mois'],
-  },
-];
+const pricingPlans = {
+  fr: [
+    {
+      name: 'Stramify Start',
+      price: '200 DH',
+      period: '/ an',
+      tag: 'Pour commencer',
+      features: ['1 appareil', 'Qualité HD / Full HD selon connexion', 'Activation rapide via WhatsApp', 'Support installation', 'Accès 12 mois'],
+    },
+    {
+      name: 'Stramify Plus',
+      price: '300 DH',
+      period: '/ an',
+      tag: 'Le plus demandé',
+      highlighted: true,
+      features: ['Jusqu’à 2 appareils', 'Qualité Full HD / 4K selon compatibilité', 'Replay selon disponibilité', 'Assistance prioritaire', 'Accès 12 mois'],
+    },
+    {
+      name: 'Stramify Premium',
+      price: '500 DH',
+      period: '/ an',
+      tag: 'Expérience complète',
+      features: ['Offre complète', 'Qualité optimale selon appareil', 'Support prioritaire', 'Configuration personnalisée', 'Accès 12 mois'],
+    },
+  ],
+  ar: [
+    {
+      name: 'Stramify Start',
+      price: '200 DH',
+      period: '/ السنة',
+      tag: 'مناسب للبدء',
+      features: ['جهاز واحد', 'جودة HD / Full HD حسب الاتصال', 'تفعيل سريع عبر WhatsApp', 'دعم في التثبيت', 'اشتراك لمدة 12 شهراً'],
+    },
+    {
+      name: 'Stramify Plus',
+      price: '300 DH',
+      period: '/ السنة',
+      tag: 'الأكثر طلباً',
+      highlighted: true,
+      features: ['حتى جهازين', 'جودة Full HD / 4K حسب التوافق', 'Replay حسب التوفر', 'دعم سريع', 'اشتراك لمدة 12 شهراً'],
+    },
+    {
+      name: 'Stramify Premium',
+      price: '500 DH',
+      period: '/ السنة',
+      tag: 'التجربة الكاملة',
+      features: ['عرض كامل', 'جودة ممتازة حسب الجهاز', 'دعم أولوية', 'إعداد مخصص', 'اشتراك لمدة 12 شهراً'],
+    },
+  ],
+};
 
-const faqItems = [
-  ['Comment profiter de l’essai 24h gratuit ?', 'Cliquez sur un bouton WhatsApp, envoyez le message prérempli et notre support vous répond avec les étapes de test selon votre appareil.'],
-  ['Comment activer mon abonnement ?', 'Après le choix du forfait et la confirmation, Stramify prépare l’accès et vous envoie les instructions d’activation sur WhatsApp.'],
-  ['Quels appareils sont compatibles ?', 'Le service est compatible avec Smart TV, Android TV, Firestick, téléphone Android, iPhone, iPad et PC selon la configuration disponible.'],
-  ['Quelle connexion Internet est recommandée ?', 'Une connexion stable est recommandée. La qualité HD, Full HD ou 4K dépend de votre débit, de votre appareil et de la compatibilité.'],
-  ['Puis-je utiliser plusieurs appareils ?', 'Oui selon le forfait choisi. Stramify Start est prévu pour 1 appareil, Stramify Plus jusqu’à 2 appareils et Premium pour une expérience plus complète.'],
-  ['Comment se fait le paiement ?', 'Le support vous confirme le forfait, les étapes et les moyens disponibles avant activation. Les tarifs sont présentés clairement.'],
-  ['Combien de temps prend l’installation ?', 'L’installation est généralement rapide si l’appareil est prêt et connecté à Internet. Le support vous guide étape par étape.'],
-  ['Que faire si le service ne fonctionne pas ?', 'Contactez le support WhatsApp. Nous vérifions la connexion, l’application, l’appareil et la configuration pour vous aider.'],
-  ['Les chaînes et contenus sont-ils toujours les mêmes ?', 'Non. Les contenus et chaînes peuvent varier selon le fournisseur, le pays, les droits de diffusion et la disponibilité technique.'],
-  ['Comment contacter le support ?', `Vous pouvez contacter Stramify sur WhatsApp au ${WHATSAPP_DISPLAY_NUMBER} pour l’essai 24h, l’activation, les tarifs et l’installation.`],
-];
+const faqItems = {
+  fr: [
+    ['Comment profiter de l’essai 24h gratuit ?', 'Cliquez sur un bouton WhatsApp, envoyez le message prérempli et notre support vous répond avec les étapes de test selon votre appareil.'],
+    ['Comment activer mon abonnement ?', 'Après le choix du forfait et la confirmation, Stramify prépare l’accès et vous envoie les instructions d’activation sur WhatsApp.'],
+    ['Quels appareils sont compatibles ?', 'Le service est compatible avec Smart TV, Android TV, Firestick, téléphone Android, iPhone, iPad et PC selon la configuration disponible.'],
+    ['Quelle connexion Internet est recommandée ?', 'Une connexion stable est recommandée. La qualité HD, Full HD ou 4K dépend de votre débit, de votre appareil et de la compatibilité.'],
+    ['Puis-je utiliser plusieurs appareils ?', 'Oui selon le forfait choisi. Stramify Start est prévu pour 1 appareil, Stramify Plus jusqu’à 2 appareils et Premium pour une expérience plus complète.'],
+    ['Comment se fait le paiement ?', 'Le support vous confirme le forfait, les étapes et les moyens disponibles avant activation. Les tarifs sont présentés clairement.'],
+    ['Combien de temps prend l’installation ?', 'L’installation est généralement rapide si l’appareil est prêt et connecté à Internet. Le support vous guide étape par étape.'],
+    ['Que faire si le service ne fonctionne pas ?', 'Contactez le support WhatsApp. Nous vérifions la connexion, l’application, l’appareil et la configuration pour vous aider.'],
+    ['Les chaînes et contenus sont-ils toujours les mêmes ?', 'Non. Les contenus et chaînes peuvent varier selon le fournisseur, le pays, les droits de diffusion et la disponibilité technique.'],
+    ['Comment contacter le support ?', `Vous pouvez contacter Stramify sur WhatsApp au ${WHATSAPP_DISPLAY_NUMBER} pour l’essai 24h, l’activation, les tarifs et l’installation.`],
+  ],
+  ar: [
+    ['كيف أستفيد من تجربة 24 ساعة المجانية؟', 'اضغط على زر WhatsApp وأرسل الرسالة الجاهزة، وسيجيبك فريق الدعم بخطوات التجربة المناسبة لجهازك.'],
+    ['كيف يتم تفعيل الاشتراك؟', 'بعد اختيار الباقة والتأكيد، يقوم فريق Stramify بتجهيز الوصول وإرسال تعليمات التفعيل عبر WhatsApp.'],
+    ['ما هي الأجهزة المتوافقة؟', 'الخدمة متوافقة مع Smart TV وAndroid TV وFirestick وهاتف Android وiPhone وiPad والكمبيوتر حسب الإعداد المتوفر.'],
+    ['ما هي سرعة الإنترنت المناسبة؟', 'ننصح باتصال مستقر. جودة HD أو Full HD أو 4K تعتمد على سرعة الاتصال والجهاز والتوافق.'],
+    ['هل يمكن استعمال الاشتراك على أكثر من جهاز؟', 'نعم حسب الباقة المختارة. Stramify Start لجهاز واحد، وStramify Plus حتى جهازين، وPremium لتجربة أكثر اكتمالاً.'],
+    ['كيف يتم الدفع؟', 'يؤكد لك فريق الدعم الباقة والخطوات والوسائل المتاحة قبل التفعيل. الأسعار معروضة بوضوح.'],
+    ['كم يستغرق التثبيت؟', 'عادة يكون التثبيت سريعاً إذا كان الجهاز جاهزاً ومتصلًا بالإنترنت. الدعم يرافقك خطوة بخطوة.'],
+    ['ماذا أفعل إذا لم يشتغل الاشتراك؟', 'تواصل مع الدعم عبر WhatsApp. نراجع الاتصال والتطبيق والجهاز والإعدادات لمساعدتك.'],
+    ['هل القنوات والمحتوى ثابتة دائماً؟', 'لا. قد تختلف القنوات والمحتويات حسب المورد والبلد وحقوق البث والتوفر التقني.'],
+    ['كيف أتواصل مع الدعم؟', `يمكنك التواصل مع Stramify عبر WhatsApp على الرقم ${WHATSAPP_DISPLAY_NUMBER} بخصوص التجربة، التفعيل، الأسعار والتثبيت.`],
+  ],
+};
+
+const installationContent = {
+  fr: {
+    title: 'Guide d’installation Stramify',
+    subtitle: 'Ce guide vous aide à préparer votre appareil avant l’activation. Les étapes peuvent varier selon le modèle, l’application compatible et votre connexion Internet.',
+    sections: [
+      ['Installation sur Smart TV', 'Ouvrez le store ou l’espace applications de votre Smart TV, installez une application compatible recommandée par le support, puis saisissez les informations reçues après activation. Si vous hésitez, envoyez une photo du modèle de votre TV sur WhatsApp.'],
+      ['Installation sur Android TV', 'Vérifiez que votre box Android TV est connectée à Internet, installez une application de lecture TV compatible, puis suivez les identifiants fournis par Stramify. Le support peut vous guider étape par étape.'],
+      ['Installation sur Firestick', 'Connectez votre Firestick au Wi-Fi, préparez l’espace application et contactez le support pour recevoir la méthode adaptée à votre appareil. Nous évitons les manipulations inutiles et privilégions une configuration simple.'],
+      ['Installation sur téléphone Android', 'Installez une application compatible depuis une source officielle lorsque possible, ouvrez-la, puis renseignez les accès fournis. Une connexion stable est recommandée pour une lecture fluide.'],
+      ['Installation sur iPhone/iPad', 'Sur iOS, utilisez une application compatible disponible dans l’App Store lorsque possible. Le support Stramify vous indique les champs à remplir et les bonnes pratiques de connexion.'],
+      ['Installation sur PC', 'Sur ordinateur, vous pouvez utiliser une solution compatible ou un lecteur adapté. Notre support vous explique la configuration selon Windows, Mac et votre niveau de confort technique.'],
+    ],
+  },
+  ar: {
+    title: 'دليل تثبيت Stramify',
+    subtitle: 'يساعدك هذا الدليل على تجهيز جهازك قبل التفعيل. قد تختلف الخطوات حسب نوع الجهاز، التطبيق المتوافق وسرعة الاتصال.',
+    sections: [
+      ['التثبيت على Smart TV', 'افتح متجر التطبيقات أو مساحة التطبيقات في التلفاز الذكي، ثم ثبّت تطبيقاً متوافقاً حسب توجيهات الدعم، وبعدها أدخل معلومات الوصول التي تتوصل بها بعد التفعيل. إذا لم تكن متأكداً من نوع التلفاز، أرسل صورة الموديل عبر WhatsApp.'],
+      ['التثبيت على Android TV', 'تأكد أن جهاز Android TV متصل بالإنترنت، ثم ثبّت تطبيق قراءة TV متوافقاً واتبع معلومات الدخول التي يوفرها Stramify. يمكن للدعم مرافقتك خطوة بخطوة.'],
+      ['التثبيت على Firestick', 'صل جهاز Firestick بشبكة Wi-Fi، جهّز مساحة التطبيقات، ثم تواصل مع الدعم للحصول على الطريقة المناسبة لجهازك. نفضل خطوات بسيطة وواضحة بدون إعدادات معقدة.'],
+      ['التثبيت على هاتف Android', 'ثبّت تطبيقاً متوافقاً من مصدر رسمي عندما يكون ذلك ممكناً، افتحه، ثم أدخل معلومات الوصول التي توصلت بها. ننصح باتصال مستقر لتجربة مشاهدة أفضل.'],
+      ['التثبيت على iPhone / iPad', 'على iOS، استعمل تطبيقاً متوافقاً متاحاً في App Store عندما يكون ذلك ممكناً. يوضح لك دعم Stramify الخانات التي يجب ملؤها وأفضل طريقة للاتصال.'],
+      ['التثبيت على الكمبيوتر', 'على الكمبيوتر يمكنك استعمال حل متوافق أو قارئ مناسب. يشرح لك الدعم طريقة الإعداد حسب Windows أو Mac وحسب مستوى راحتك مع الخطوات التقنية.'],
+    ],
+  },
+};
+
+const contactContent = {
+  fr: {
+    title: 'Contact Stramify',
+    text: 'Notre support vous répond sur WhatsApp pour l’essai 24h, l’activation, le choix du forfait et l’installation.',
+    cards: [
+      ['Essai 24h', 'Demandez un test avant de choisir un forfait.'],
+      ['Activation', 'Recevez les étapes adaptées à votre appareil.'],
+      ['Installation', 'Obtenez une aide claire sur WhatsApp.'],
+    ],
+  },
+  ar: {
+    title: 'اتصل بنا',
+    text: 'فريق الدعم يجيبك عبر WhatsApp لمساعدتك في تجربة 24 ساعة، اختيار الباقة، التفعيل والتثبيت.',
+    cards: [
+      ['تجربة 24 ساعة', 'اطلب تجربة قبل اختيار الباقة المناسبة.'],
+      ['التفعيل', 'توصل بالخطوات المناسبة لجهازك.'],
+      ['التثبيت', 'احصل على مساعدة واضحة عبر WhatsApp.'],
+    ],
+  },
+};
 
 const featureIcons = [Tv, Sparkles, Headphones, Zap, Wifi];
 const deviceIcons = [Tv, Monitor, PlayCircle, TabletSmartphone, Smartphone, Laptop];
@@ -454,7 +603,7 @@ function Header({ lang, setLang, t }) {
               <ChevronDown size={16} aria-hidden="true" />
             </button>
             <div className="invisible absolute start-0 top-full z-20 mt-3 min-w-48 rounded-2xl border border-slate-200 bg-white p-2 opacity-0 shadow-soft transition group-hover:visible group-hover:opacity-100">
-              {cityLinks.map((link) => (
+              {t.cityLinks.map((link) => (
                 <Link key={link.href} href={link.href} className="block rounded-xl px-3 py-2 text-sm font-bold text-ink hover:bg-soft hover:text-primary">
                   {link.label}
                 </Link>
@@ -468,7 +617,7 @@ function Header({ lang, setLang, t }) {
 
         <div className="hidden items-center gap-3 lg:flex">
           <LanguageSwitch lang={lang} setLang={setLang} />
-          <a className="btn btn-green" href={createWhatsAppUrl()} target="_blank" rel="noreferrer">{t.nav.cta}</a>
+          <a className="btn btn-green" href={createWhatsAppUrl(t.whatsappMessage)} target="_blank" rel="noreferrer">{t.nav.cta}</a>
         </div>
 
         <div className="flex items-center gap-2 lg:hidden">
@@ -488,12 +637,12 @@ function Header({ lang, setLang, t }) {
       {open && (
         <div className="border-t border-slate-200 bg-white px-4 py-4 shadow-soft lg:hidden">
           <div className="mx-auto flex max-w-7xl flex-col gap-2">
-            {[...navLinks, ...cityLinks].map((link) => (
+            {[...navLinks, ...t.cityLinks].map((link) => (
               <Link key={link.href} href={link.href} onClick={() => setOpen(false)} className="rounded-2xl px-3 py-3 text-sm font-bold text-ink hover:bg-soft hover:text-primary">
                 {link.label}
               </Link>
             ))}
-            <a className="btn btn-green mt-3 justify-center" href={createWhatsAppUrl()} target="_blank" rel="noreferrer">{t.nav.cta}</a>
+            <a className="btn btn-green mt-3 justify-center" href={createWhatsAppUrl(t.whatsappMessage)} target="_blank" rel="noreferrer">{t.nav.cta}</a>
           </div>
         </div>
       )}
@@ -542,7 +691,7 @@ function HeroVisual({ t }) {
             </div>
           </div>
           <div className="mt-5 grid grid-cols-3 gap-3">
-            {['Smart TV', 'Replay', 'Support'].map((item) => (
+            {t.visualLabels.map((item) => (
               <div key={item} className="rounded-2xl bg-white/12 px-3 py-4 text-center text-sm font-black text-white ring-1 ring-white/15">
                 {item}
               </div>
@@ -568,7 +717,7 @@ function HomePage({ lang, t }) {
             <h1 className="max-w-4xl text-4xl font-black leading-tight text-navy sm:text-5xl lg:text-6xl">{t.heroTitle}</h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-muted">{t.heroSubtitle}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a className="btn btn-red btn-large" href={createWhatsAppUrl()} target="_blank" rel="noreferrer">{t.heroPrimary}</a>
+              <a className="btn btn-red btn-large" href={createWhatsAppUrl(t.whatsappMessage)} target="_blank" rel="noreferrer">{t.heroPrimary}</a>
               <Link className="btn btn-green btn-large" href="/tarifs">{t.heroSecondary}</Link>
             </div>
             <div className="mt-8 grid max-w-2xl gap-3 rounded-[1.5rem] bg-gradient-to-r from-primary to-orange-500 p-4 text-white shadow-lift sm:grid-cols-[1fr_auto] sm:items-center">
@@ -643,11 +792,13 @@ function DevicesSection({ lang, t }) {
 }
 
 function PricingSection({ lang, t }) {
+  const plans = pricingPlans[lang];
+
   return (
     <section id="tarifs" className="section bg-soft">
       <SectionHeader lang={lang} title={t.pricingTitle} subtitle={t.pricingSubtitle} />
       <div className="mx-auto grid max-w-7xl gap-5 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
-        {pricingPlans.map((plan) => (
+        {plans.map((plan) => (
           <article key={plan.name} className={`pricing-card ${plan.highlighted ? 'pricing-card-popular' : ''} ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
             <span className={plan.highlighted ? 'popular-pill' : 'mb-4 inline-flex w-fit rounded-full bg-red-50 px-3 py-1 text-xs font-black uppercase tracking-[0.1em] text-primary'}>
               {plan.highlighted ? t.popular : plan.tag}
@@ -665,7 +816,7 @@ function PricingSection({ lang, t }) {
                 </li>
               ))}
             </ul>
-            <a className={`btn mt-7 w-full justify-center ${plan.highlighted ? 'btn-red' : 'btn-outline'}`} href={createWhatsAppUrl()} target="_blank" rel="noreferrer">
+            <a className={`btn mt-7 w-full justify-center ${plan.highlighted ? 'btn-red' : 'btn-outline'}`} href={createWhatsAppUrl(t.whatsappMessage)} target="_blank" rel="noreferrer">
               {t.planCta}
             </a>
           </article>
@@ -686,7 +837,7 @@ function PromoSection({ t }) {
           <p className="mt-3 max-w-2xl leading-7 text-white/86">{t.promoText}</p>
         </div>
         <Countdown labels={t.countdown} />
-        <a className="btn bg-white text-primary hover:-translate-y-0.5 hover:bg-red-50 focus:ring-white/40" href={createWhatsAppUrl()} target="_blank" rel="noreferrer">
+        <a className="btn bg-white text-primary hover:-translate-y-0.5 hover:bg-red-50 focus:ring-white/40" href={createWhatsAppUrl(t.whatsappMessage)} target="_blank" rel="noreferrer">
           {t.promoCta}
         </a>
       </div>
@@ -722,7 +873,7 @@ function TrialSection({ t }) {
       <div className="mx-auto rounded-[2rem] bg-gradient-to-br from-navy via-primary to-red-500 px-6 py-12 text-center text-white shadow-lift sm:px-8 lg:max-w-7xl">
         <h2 className="text-3xl font-black sm:text-4xl">{t.trialTitle}</h2>
         <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-white/84">{t.trialText}</p>
-        <a className="btn mt-8 bg-white text-primary hover:-translate-y-0.5 hover:bg-red-50 focus:ring-white/40" href={createWhatsAppUrl()} target="_blank" rel="noreferrer">
+        <a className="btn mt-8 bg-white text-primary hover:-translate-y-0.5 hover:bg-red-50 focus:ring-white/40" href={createWhatsAppUrl(t.whatsappMessage)} target="_blank" rel="noreferrer">
           {t.trialCta}
         </a>
       </div>
@@ -734,18 +885,18 @@ function FaqPreview({ lang, t }) {
   return (
     <section className="section bg-white">
       <SectionHeader lang={lang} title={t.faqTitle} />
-      <FaqList items={faqItems.slice(0, 6)} />
+      <FaqList items={faqItems[lang].slice(0, 6)} dir={t.dir} />
       <div className="mt-8 text-center">
-        <Link href="/faq" className="btn btn-outline">Voir toutes les questions</Link>
+        <Link href="/faq" className="btn btn-outline">{t.faqAllCta}</Link>
       </div>
     </section>
   );
 }
 
-function FaqList({ items }) {
+function FaqList({ items, dir }) {
   const [active, setActive] = useState(0);
   return (
-    <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8" dir={dir}>
       {items.map(([question, answer], index) => {
         const isOpen = active === index;
         return (
@@ -767,22 +918,22 @@ function FaqList({ items }) {
   );
 }
 
-function SeoPage({ page }) {
+function SeoPage({ page, lang, t }) {
   return (
     <>
       <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl">
+        <div className={`mx-auto max-w-4xl ${lang === 'ar' ? 'text-right' : 'text-left'}`} dir={t.dir}>
           <p className="mb-4 text-sm font-black uppercase tracking-[0.16em] text-primary">{page.eyebrow}</p>
           <h1 className="text-4xl font-black leading-tight text-navy sm:text-5xl">{page.h1}</h1>
           <p className="mt-6 text-lg leading-8 text-muted">{page.intro}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a className="btn btn-red btn-large" href={createWhatsAppUrl()} target="_blank" rel="noreferrer">Essai 24h gratuit</a>
-            <Link className="btn btn-green btn-large" href="/tarifs">Voir les forfaits</Link>
+            <a className="btn btn-red btn-large" href={createWhatsAppUrl(t.whatsappMessage)} target="_blank" rel="noreferrer">{t.trialCta}</a>
+            <Link className="btn btn-green btn-large" href="/tarifs">{t.heroSecondary}</Link>
           </div>
         </div>
       </section>
       <section className="bg-soft px-4 py-14 sm:px-6 lg:px-8">
-        <article className="prose-like mx-auto max-w-4xl rounded-[1.5rem] bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-8">
+        <article className={`prose-like mx-auto max-w-4xl rounded-[1.5rem] bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-8 ${lang === 'ar' ? 'text-right' : 'text-left'}`} dir={t.dir}>
           {page.sections.map(([title, paragraphs]) => (
             <div key={title} className="mb-8 last:mb-0">
               <h2 className="text-2xl font-black text-navy">{title}</h2>
@@ -793,21 +944,16 @@ function SeoPage({ page }) {
           ))}
         </article>
       </section>
-      <InternalLinks />
+      <InternalLinks t={t} />
     </>
   );
 }
 
-function InternalLinks() {
+function InternalLinks({ t }) {
   return (
     <section className="bg-white px-4 py-10 sm:px-6 lg:px-8">
-      <div className="mx-auto flex max-w-4xl flex-wrap gap-3">
-        {[
-          ['Tarifs', '/tarifs'],
-          ['Installation', '/installation'],
-          ['FAQ', '/faq'],
-          ['Contact', '/contact'],
-        ].map(([label, href]) => (
+      <div className="mx-auto flex max-w-4xl flex-wrap gap-3" dir={t.dir}>
+        {t.internalLinks.map(({ label, href }) => (
           <Link key={href} href={href} className="btn btn-outline">{label}</Link>
         ))}
       </div>
@@ -815,65 +961,57 @@ function InternalLinks() {
   );
 }
 
-function InstallationPage() {
-  const sections = [
-    ['Installation sur Smart TV', 'Ouvrez le store ou l’espace applications de votre Smart TV, installez une application compatible recommandée par le support, puis saisissez les informations reçues après activation. Si vous hésitez, envoyez une photo du modèle de votre TV sur WhatsApp.'],
-    ['Installation sur Android TV', 'Vérifiez que votre box Android TV est connectée à Internet, installez une application de lecture TV compatible, puis suivez les identifiants fournis par Stramify. Le support peut vous guider étape par étape.'],
-    ['Installation sur Firestick', 'Connectez votre Firestick au Wi-Fi, préparez l’espace application et contactez le support pour recevoir la méthode adaptée à votre appareil. Nous évitons les manipulations inutiles et privilégions une configuration simple.'],
-    ['Installation sur téléphone Android', 'Installez une application compatible depuis une source officielle lorsque possible, ouvrez-la, puis renseignez les accès fournis. Une connexion stable est recommandée pour une lecture fluide.'],
-    ['Installation sur iPhone/iPad', 'Sur iOS, utilisez une application compatible disponible dans l’App Store lorsque possible. Le support Stramify vous indique les champs à remplir et les bonnes pratiques de connexion.'],
-    ['Installation sur PC', 'Sur ordinateur, vous pouvez utiliser une solution compatible ou un lecteur adapté. Notre support vous explique la configuration selon Windows, Mac et votre niveau de confort technique.'],
-  ];
+function InstallationPage({ lang, t }) {
+  const content = installationContent[lang];
+
   return (
     <>
       <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl">
-          <h1 className="text-4xl font-black text-navy sm:text-5xl">Guide d’installation Stramify</h1>
-          <p className="mt-6 text-lg leading-8 text-muted">Ce guide vous aide à préparer votre appareil avant l’activation. Les étapes peuvent varier selon le modèle, l’application compatible et votre connexion Internet.</p>
+        <div className={`mx-auto max-w-4xl ${lang === 'ar' ? 'text-right' : 'text-left'}`} dir={t.dir}>
+          <h1 className="text-4xl font-black text-navy sm:text-5xl">{content.title}</h1>
+          <p className="mt-6 text-lg leading-8 text-muted">{content.subtitle}</p>
         </div>
       </section>
       <section className="bg-soft px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-5xl gap-5 md:grid-cols-2">
-          {sections.map(([title, text]) => (
-            <article key={title} className="card">
+          {content.sections.map(([title, text]) => (
+            <article key={title} className={`card ${lang === 'ar' ? 'text-right' : 'text-left'}`} dir={t.dir}>
               <h2 className="text-2xl font-black text-navy">{title}</h2>
               <p className="mt-4 leading-8 text-muted">{text}</p>
             </article>
           ))}
         </div>
       </section>
-      <TrialSection t={translations.fr} />
-      <InternalLinks />
+      <TrialSection t={t} />
+      <InternalLinks t={t} />
     </>
   );
 }
 
-function ContactPage() {
+function ContactPage({ lang, t }) {
+  const content = contactContent[lang];
+
   return (
     <>
       <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl">
-          <h1 className="text-4xl font-black text-navy sm:text-5xl">Contact Stramify</h1>
-          <p className="mt-6 text-lg leading-8 text-muted">Notre support vous répond sur WhatsApp pour l’essai 24h, l’activation, le choix du forfait et l’installation.</p>
+        <div className={`mx-auto max-w-4xl ${lang === 'ar' ? 'text-right' : 'text-left'}`} dir={t.dir}>
+          <h1 className="text-4xl font-black text-navy sm:text-5xl">{content.title}</h1>
+          <p className="mt-6 text-lg leading-8 text-muted">{content.text}</p>
           <p className="mt-4 text-2xl font-black text-navy">{WHATSAPP_DISPLAY_NUMBER}</p>
-          <a className="btn btn-green btn-large mt-8" href={createWhatsAppUrl()} target="_blank" rel="noreferrer">Contacter WhatsApp</a>
+          <a className="btn btn-green btn-large mt-8" href={createWhatsAppUrl(t.whatsappMessage)} target="_blank" rel="noreferrer">{t.contactWhatsApp}</a>
         </div>
       </section>
       <section className="bg-soft px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-5xl gap-5 md:grid-cols-3">
-          {[
-            ['Essai 24h', 'Demandez un test avant de choisir un forfait.'],
-            ['Activation', 'Recevez les étapes adaptées à votre appareil.'],
-            ['Installation', 'Obtenez une aide claire sur WhatsApp.'],
-          ].map(([title, text]) => (
-            <article key={title} className="card">
+          {content.cards.map(([title, text]) => (
+            <article key={title} className={`card ${lang === 'ar' ? 'text-right' : 'text-left'}`} dir={t.dir}>
               <h2 className="text-xl font-black text-navy">{title}</h2>
               <p className="mt-3 leading-7 text-muted">{text}</p>
             </article>
           ))}
         </div>
       </section>
-      <InternalLinks />
+      <InternalLinks t={t} />
     </>
   );
 }
@@ -882,7 +1020,7 @@ function TarifsPage({ lang, t, page }) {
   return (
     <>
       <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl">
+        <div className={`mx-auto max-w-4xl ${lang === 'ar' ? 'text-right' : 'text-left'}`} dir={t.dir}>
           <p className="mb-4 text-sm font-black uppercase tracking-[0.16em] text-primary">{page.eyebrow}</p>
           <h1 className="text-4xl font-black text-navy sm:text-5xl">{page.h1}</h1>
           <p className="mt-6 text-lg leading-8 text-muted">{page.intro}</p>
@@ -890,7 +1028,7 @@ function TarifsPage({ lang, t, page }) {
       </section>
       <PricingSection lang={lang} t={t} />
       <section className="bg-white px-4 py-14 sm:px-6 lg:px-8">
-        <article className="prose-like mx-auto max-w-4xl rounded-[1.5rem] bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-8">
+        <article className={`prose-like mx-auto max-w-4xl rounded-[1.5rem] bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-8 ${lang === 'ar' ? 'text-right' : 'text-left'}`} dir={t.dir}>
           {page.sections.map(([title, paragraphs]) => (
             <div key={title} className="mb-8 last:mb-0">
               <h2 className="text-2xl font-black text-navy">{title}</h2>
@@ -901,31 +1039,35 @@ function TarifsPage({ lang, t, page }) {
           ))}
         </article>
       </section>
-      <InternalLinks />
+      <InternalLinks t={t} />
     </>
   );
 }
 
-function FaqPage() {
+function FaqPage({ lang, t }) {
   return (
     <>
       <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl">
-          <h1 className="text-4xl font-black text-navy sm:text-5xl">FAQ Stramify</h1>
-          <p className="mt-6 text-lg leading-8 text-muted">Retrouvez les réponses aux questions fréquentes sur l’essai 24h, l’activation, les appareils compatibles, la connexion Internet et le support.</p>
+        <div className={`mx-auto max-w-4xl ${lang === 'ar' ? 'text-right' : 'text-left'}`} dir={t.dir}>
+          <h1 className="text-4xl font-black text-navy sm:text-5xl">{lang === 'ar' ? 'الأسئلة الشائعة حول Stramify' : 'FAQ Stramify'}</h1>
+          <p className="mt-6 text-lg leading-8 text-muted">
+            {lang === 'ar'
+              ? 'إجابات واضحة حول تجربة 24 ساعة، التفعيل، الأجهزة المتوافقة، سرعة الإنترنت، الدفع والدعم عبر WhatsApp.'
+              : 'Retrouvez les réponses aux questions fréquentes sur l’essai 24h, l’activation, les appareils compatibles, la connexion Internet et le support.'}
+          </p>
         </div>
       </section>
       <section className="section bg-soft">
-        <FaqList items={faqItems} />
+        <FaqList items={faqItems[lang]} dir={t.dir} />
       </section>
-      <TrialSection t={translations.fr} />
+      <TrialSection t={t} />
     </>
   );
 }
 
 function Footer({ t }) {
   return (
-    <footer className="bg-navy text-white">
+    <footer className="bg-navy text-white" dir={t.dir}>
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-[1.1fr_1fr_1fr] lg:px-8">
         <div>
           <div className="flex items-center gap-3">
@@ -939,9 +1081,9 @@ function Footer({ t }) {
           <p className="mt-5 text-sm leading-6 text-white/60">{t.legalNotice}</p>
         </div>
         <div>
-          <h3 className="font-black">Liens rapides</h3>
+          <h3 className="font-black">{t.footerQuick}</h3>
           <div className="mt-4 grid grid-cols-2 gap-3">
-            {footerLinks.slice(0, 10).map((link) => (
+            {t.footerLinks.slice(0, 10).map((link) => (
               <Link key={link.href} href={link.href} className="text-sm font-semibold text-white/70 hover:text-white">
                 {link.label}
               </Link>
@@ -949,15 +1091,15 @@ function Footer({ t }) {
           </div>
         </div>
         <div>
-          <h3 className="font-black">Informations</h3>
+          <h3 className="font-black">{t.footerInfo}</h3>
           <div className="mt-4 grid gap-3">
-            {footerLinks.slice(10).map((link) => (
+            {t.footerLinks.slice(10).map((link) => (
               <Link key={link.href} href={link.href} className="text-sm font-semibold text-white/70 hover:text-white">
                 {link.label}
               </Link>
             ))}
           </div>
-          <a className="btn btn-green mt-5" href={createWhatsAppUrl()} target="_blank" rel="noreferrer">Essai 24h gratuit</a>
+          <a className="btn btn-green mt-5" href={createWhatsAppUrl(t.whatsappMessage)} target="_blank" rel="noreferrer">{t.trialCta}</a>
         </div>
       </div>
       <div className="border-t border-white/10 px-4 py-5 text-center text-sm text-white/55">
@@ -967,17 +1109,17 @@ function Footer({ t }) {
   );
 }
 
-function FloatingWhatsApp() {
+function FloatingWhatsApp({ t }) {
   return (
     <a
       className="fixed bottom-4 right-4 z-50 inline-flex items-center gap-2 rounded-full bg-greenCta px-4 py-3 text-sm font-black text-white shadow-2xl transition hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-green-300 sm:bottom-5 sm:right-5"
-      href={createWhatsAppUrl()}
+      href={createWhatsAppUrl(t.whatsappMessage)}
       target="_blank"
       rel="noreferrer"
-      aria-label="Essai 24h WhatsApp"
+      aria-label={`${t.trialCta} WhatsApp`}
     >
       <MessageCircle size={22} aria-hidden="true" />
-      <span>Essai 24h</span>
+      <span>{t.trialCta}</span>
     </a>
   );
 }
@@ -1159,6 +1301,183 @@ const seoPages = {
   },
 };
 
+const seoPagesAr = {
+  '/abonnement-tv-maroc': {
+    h1: 'اشتراك TV عبر الإنترنت في المغرب',
+    title: 'اشتراك TV المغرب | Stramify تجربة 24 ساعة',
+    description: 'اكتشف Stramify، حل مشاهدة عبر الإنترنت في المغرب مع تجربة 24 ساعة، تفعيل سريع، دعم WhatsApp وتوافق مع Smart TV وAndroid TV وFirestick والهاتف والكمبيوتر.',
+    eyebrow: 'دليل المغرب',
+    intro: 'يرافق Stramify المستخدمين في المغرب الذين يبحثون عن حل مشاهدة عبر الإنترنت واضح وسهل ومتوافق مع الأجهزة اليومية.',
+    sections: [
+      ['حل مناسب للمستخدمين في المغرب', [
+        'اختيار اشتراك مشاهدة في المغرب يجب أن يكون واضحاً قبل التفعيل. لذلك يركز Stramify على تجربة 24 ساعة عبر WhatsApp، شرح بسيط للخطوات، ومساعدة في التثبيت حسب الجهاز الذي تستعمله في المنزل أو العمل.',
+        'قد يشاهد المستخدم من Smart TV في الصالون، أو من Android TV، أو Firestick، أو الهاتف، أو الكمبيوتر. لهذا يجب أن تكون التجربة مرنة، مع توضيح أن المحتويات والقنوات قد تختلف حسب المورد والبلد والحقوق المتاحة والعرض المختار.',
+      ]],
+      ['التفعيل والدعم والتوافق', [
+        'التفعيل عبر WhatsApp يساعد على تقليل الأخطاء التقنية. تخبر الدعم بنوع الجهاز، ثم تتوصل بتعليمات مناسبة وواضحة. هذه الطريقة مفيدة للعائلات والطلاب والمستخدمين الذين يريدون بدء التجربة بدون إعدادات معقدة.',
+        'جودة HD أو Full HD أو 4K تعتمد على سرعة الإنترنت والجهاز والتوافق. لذلك ننصح بتجربة 24 ساعة قبل اختيار الباقة السنوية حتى تتحقق من الاستقرار وسهولة الاستعمال.',
+      ]],
+      ['اختيار الباقة المناسبة', [
+        'الباقة المناسبة تعتمد على عدد الأجهزة وسرعة الاتصال وحاجتك للدعم. يمكن لمستخدم واحد اختيار Stramify Start، بينما قد تفضل العائلة Stramify Plus أو Stramify Premium. راجع صفحة الأسعار ثم تواصل عبر WhatsApp إذا احتجت نصيحة مباشرة.',
+      ]],
+    ],
+  },
+  '/iptv-maroc': {
+    h1: 'IPTV المغرب: حل مشاهدة عبر الإنترنت مع دعم واضح',
+    title: 'IPTV المغرب | Stramify حل مشاهدة عبر الإنترنت',
+    description: 'Stramify يقدم حلاً منظماً للباحثين عن IPTV المغرب مع تجربة 24 ساعة، تفعيل عبر WhatsApp ومساعدة في التثبيت.',
+    eyebrow: 'IPTV المغرب',
+    intro: 'يستعمل كثير من المستخدمين عبارة IPTV المغرب عند البحث عن مشاهدة TV عبر الإنترنت. يفضل Stramify تقديم تجربة مهنية وشفافة تركز على التوافق والدعم.',
+    sections: [
+      ['فهم البحث عن IPTV المغرب', [
+        'عندما يبحث المستخدم عن IPTV المغرب فهو غالباً يريد تشغيل خدمة TV عبر الإنترنت على Smart TV أو Android TV أو Firestick أو الهاتف أو الكمبيوتر. هذا البحث قد يعني مقارنة الأسعار، معرفة طريقة التثبيت، التأكد من الجودة، أو طلب تجربة قبل الاشتراك.',
+        'يتعامل Stramify مع هذا الطلب بطريقة واضحة ومسؤولة. لا نقدم وعوداً مبالغاً فيها حول قنوات أو كتالوجات محددة، لأن المحتوى قد يتغير حسب المورد والبلد والحقوق والتوفر التقني.',
+      ]],
+      ['تجربة مبنية على المساعدة', [
+        'الدعم عبر WhatsApp جزء أساسي من التجربة. تطلب تجربة 24 ساعة، ترسل نوع جهازك، ثم تتوصل بخطوات مبسطة. هذه الطريقة تساعد على تجنب أخطاء التثبيت وتوضح هل اتصالك وجهازك مناسبان أم لا.',
+        'على Smart TV الحديثة يمكن أن تكون الخطوات سريعة. على Android TV أو Firestick قد تحتاج إلى بعض الإعدادات. أما على الهاتف أو الكمبيوتر فيوجهك الدعم حسب مستوى راحتك مع الخطوات التقنية.',
+      ]],
+      ['قارن قبل الاختيار', [
+        'قبل اختيار الباقة، تحقق من عدد الأجهزة والجودة المطلوبة وحاجتك للمساعدة. صفحة الأسعار تشرح Stramify Start وStramify Plus وStramify Premium، وصفحة التثبيت تشرح الأجهزة الرئيسية، أما صفحة الأسئلة الشائعة فتجيب عن الأسئلة المتكررة.',
+      ]],
+    ],
+  },
+  '/iptv-4k-maroc': {
+    h1: 'IPTV 4K المغرب: جودة HD وFull HD و4K حسب التوافق',
+    title: 'IPTV 4K المغرب | جودة مشاهدة مع Stramify',
+    description: 'معلومات حول جودة HD وFull HD و4K لحل مشاهدة عبر الإنترنت في المغرب متوافق مع Smart TV وAndroid TV وFirestick والكمبيوتر.',
+    eyebrow: 'جودة الصورة',
+    intro: 'جودة 4K تهم كثيراً من المستخدمين، لكنها تعتمد دائماً على الاتصال والجهاز والتطبيق المتوافق والتوفر التقني.',
+    sections: [
+      ['الجودة تعتمد على بيئة الاستعمال', [
+        'قد يوفر حل المشاهدة عبر الإنترنت جودة جيدة، لكن النتيجة الفعلية ترتبط بسرعة الإنترنت والجهاز والتطبيق وطريقة الاتصال. تلفاز Smart TV حديث مع اتصال مستقر يعطي غالباً تجربة أفضل من جهاز قديم أو Wi-Fi ضعيف.',
+        'لهذا يستعمل Stramify صياغة مسؤولة: جودة HD أو Full HD أو 4K حسب الاتصال والجهاز والتوافق. تجربة 24 ساعة عبر WhatsApp تساعدك على التحقق قبل الاشتراك السنوي.',
+      ]],
+      ['نصائح لتجربة أكثر استقراراً', [
+        'استعمل اتصالاً سلكياً إذا كان ممكناً، أو ضع جهاز التوجيه قريباً من التلفاز، وتجنب التحميلات الثقيلة أثناء المشاهدة. هذه التفاصيل الصغيرة قد تحسن الاستقرار خصوصاً أثناء الأحداث الرياضية الكبرى.',
+        'يمكن لدعم Stramify مساعدتك في مراجعة التطبيق والإعدادات وسلوك الجهاز. الهدف هو تجربة مريحة وواقعية، وليس تقديم وعود لا تراعي ظروف اتصالك.',
+      ]],
+      ['اختيار الباقة حسب الجودة', [
+        'إذا كانت جودة الصورة أولوية لديك، قارن بين Stramify Plus وStramify Premium. القرار يعتمد أيضاً على عدد الأجهزة وحاجتك إلى إعداد مخصص. صفحة الأسعار والتثبيت تساعدك على الاختيار.',
+      ]],
+    ],
+  },
+  '/iptv-tanger': {
+    h1: 'اشتراك TV عبر الإنترنت في طنجة',
+    title: 'IPTV طنجة | Stramify اشتراك مشاهدة عبر الإنترنت',
+    description: 'حل مشاهدة عبر الإنترنت في طنجة مع تجربة 24 ساعة عبر WhatsApp، تفعيل سريع ودعم Smart TV وAndroid TV وFirestick والهاتف والكمبيوتر.',
+    eyebrow: 'طنجة',
+    intro: 'في طنجة تختلف طريقة المشاهدة بين الشقق الحديثة والمنازل العائلية والمستخدمين المتنقلين. يساعدك Stramify على اختبار الخدمة بسهولة قبل الاختيار.',
+    sections: [
+      ['للمنازل والشقق في طنجة', [
+        'طنجة مدينة متصلة، ويستعمل كثير من سكانها Smart TV وAndroid TV وFirestick للوصول إلى تجربة مشاهدة عبر الإنترنت. سواء كنت في شقة وسط المدينة أو منزل عائلي أو حي سكني جديد، فأنت تحتاج إلى حل واضح وسريع التثبيت.',
+        'يوفر Stramify تجربة 24 ساعة عبر WhatsApp للتحقق من الاستقرار قبل اختيار الباقة. هذه الخطوة مفيدة لأن جودة الاتصال قد تختلف بين الألياف وADSL و4G وشبكات Wi-Fi المشتركة.',
+      ]],
+      ['دعم سريع وتثبيت موجه', [
+        'قد يكون التثبيت بسيطاً على Smart TV، لكن بعض النماذج تحتاج خطوات مختلفة. على Android TV أو Firestick يجب أحياناً تجهيز التطبيق والتحقق من الاتصال وإدخال بيانات الوصول بشكل صحيح.',
+        'يقدم Stramify إرشادات هادئة وواضحة بدون وعود مبالغ فيها. كما نوضح أن المحتويات قد تختلف حسب العرض والمورد والبلد والحقوق، حتى تختار وأنت تعرف ما الذي تختبره.',
+      ]],
+      ['مقارنة العروض من طنجة', [
+        'للاستعمال على جهاز واحد قد تكفي باقة Stramify Start. إذا كان البيت يحتاج مرونة أكثر، يمكن أن تكون Plus أو Premium أنسب. راجع الأسعار ودليل التثبيت والأسئلة الشائعة قبل التواصل عبر WhatsApp.',
+      ]],
+    ],
+  },
+  '/iptv-casablanca': {
+    h1: 'اشتراك TV عبر الإنترنت في الدار البيضاء',
+    title: 'IPTV الدار البيضاء | Stramify TV عبر الإنترنت',
+    description: 'اشتراك مشاهدة عبر الإنترنت في الدار البيضاء للعائلات والشقق والمستخدمين المتصلين مع تجربة 24 ساعة ودعم WhatsApp وتفعيل سريع.',
+    eyebrow: 'الدار البيضاء',
+    intro: 'في الدار البيضاء تكون الاستعمالات سريعة ومشتركة بين أفراد البيت. يساعد Stramify على اختيار إعداد مناسب وواضح.',
+    sections: [
+      ['حل مناسب للاستعمال الحضري', [
+        'تجمع الدار البيضاء عائلات في شقق، شباباً عاملين، ومستخدمين يعتمدون على الألياف أو 4G أو Wi-Fi مشترك. لذلك يجب أن يكون حل المشاهدة عبر الإنترنت بسيطاً ومتوافقاً وسهل الاختبار.',
+        'غالباً تكون Smart TV الشاشة الأساسية في الصالون، بينما يستعمل الهاتف أو الكمبيوتر كحل إضافي. يساعدك دعم Stramify في اختيار طريقة التثبيت حسب جهازك بدون تعقيد.',
+      ]],
+      ['العائلة والاتصال والتوافق', [
+        'تؤثر سرعة الاتصال واستقراره كثيراً على التجربة. قد تكون الألياف ممتازة، لكن Wi-Fi مزدحم داخل عمارة قد يقلل الانسيابية. تجربة 24 ساعة تساعدك على اختبار الظروف الحقيقية داخل منزلك في الدار البيضاء.',
+        'يحافظ Stramify على خطاب واضح ومسؤول. قد تختلف المحتويات والقنوات حسب العروض والموردين والحقوق. دورنا هو المساعدة في الإعداد والتوافق واختيار الباقة الأنسب.',
+      ]],
+      ['اختيار الباقة في الدار البيضاء', [
+        'للاستعمال الفردي قد تكون Start مناسبة. لعائلة أو منزل يستعمل جهازين أحياناً، قد تكون Plus أكثر راحة. Premium موجه لمن يريد مرافقة أكثر تخصيصاً. صفحات الأسعار والتثبيت والأسئلة الشائعة توضح التفاصيل.',
+      ]],
+    ],
+  },
+  '/iptv-rabat': {
+    h1: 'اشتراك TV عبر الإنترنت في الرباط',
+    title: 'IPTV الرباط | Stramify اشتراك مشاهدة',
+    description: 'حل مشاهدة عبر الإنترنت في الرباط مع دعم WhatsApp، تفعيل سريع، دليل تثبيت وتوافق مع Smart TV وAndroid TV وFirestick والكمبيوتر.',
+    eyebrow: 'الرباط',
+    intro: 'في الرباط يرافق Stramify الأسر التي تبحث عن تجربة مشاهدة مستقرة ومسؤولة وسهلة الإعداد.',
+    sections: [
+      ['ترفيه منزلي مستقر', [
+        'يفضل كثير من سكان الرباط تجربة مشاهدة هادئة ومستقرة داخل المنزل. سواء كنت في شقة أو منزل عائلي أو سكن طالب، يبقى الهدف هو البدء بسرعة وفهم الباقة والحصول على مساعدة عند الحاجة.',
+        'تجربة 24 ساعة تساعدك على اختبار التوافق مع Smart TV وAndroid TV وFirestick والهاتف أو الكمبيوتر. هذه الخطوة تمنع اختيار باقة قبل معرفة نتيجة الاتصال والجهاز في الواقع.',
+      ]],
+      ['المساعدة والإعداد', [
+        'يوجهك دعم Stramify في الخطوات الأساسية: معرفة نوع الجهاز، تجهيز تطبيق متوافق، إدخال معلومات الوصول وضبط الإعدادات البسيطة. هذه الطريقة مناسبة للمستخدمين الذين لا يريدون خطوات تقنية معقدة.',
+        'نبقى واضحين بخصوص المحتوى. القنوات والكتالوجات قد تختلف حسب المورد والبلد وحقوق البث. Stramify يقدم مرافقة منظمة وليس وعوداً مبالغاً فيها.',
+      ]],
+      ['عرض واضح للمستخدمين في الرباط', [
+        'تعرض صفحة الأسعار ثلاث باقات سنوية: Stramify Start وStramify Plus وStramify Premium. الاختيار يعتمد على عدد الأجهزة والجودة المطلوبة وحاجتك للدعم. WhatsApp هو الطريق الأسرع للاستشارة.',
+      ]],
+    ],
+  },
+  '/iptv-marrakech': {
+    h1: 'اشتراك TV عبر الإنترنت في مراكش',
+    title: 'IPTV مراكش | Stramify TV عبر الإنترنت',
+    description: 'اشتراك مشاهدة عبر الإنترنت في مراكش للمنازل والشقق والرياضات والعائلات مع تجربة 24 ساعة وتفعيل WhatsApp وتثبيت موجه.',
+    eyebrow: 'مراكش',
+    intro: 'في مراكش تشمل الاستعمالات العائلات والشقق والرياضات والمستخدمين الذين يريدون تثبيتاً بسيطاً وواضحاً.',
+    sections: [
+      ['منزل أو شقة أو رياض', [
+        'تتميز مراكش ببيئات مختلفة: منزل عائلي، شقة حديثة، رياض، سكن ثانوي أو منزل مشترك. لذلك يصبح التوافق مهماً. يمكن أن يعمل الحل على Smart TV أو Android TV أو Firestick أو الهاتف أو الكمبيوتر، لكن الأفضل اختبار كل حالة قبل الاشتراك.',
+        'يوفر Stramify تجربة 24 ساعة عبر WhatsApp لاختبار الجودة من اتصالك الحقيقي. هذا مهم عندما يمر Wi-Fi عبر عدة جدران أو يكون الاتصال مشتركاً أو الجهاز قديماً.',
+      ]],
+      ['تثبيت بمساعدة واضحة', [
+        'يسألك الدعم عن نوع الجهاز ثم يوجهك إلى الخطوات المناسبة. على Smart TV قد تكون العملية سريعة، وعلى Firestick أو Android TV قد تحتاج إلى بعض الإعدادات، أما على الهاتف والكمبيوتر فيتم تبسيط الخطوات حسب الحاجة.',
+        'المحتويات المتاحة تعتمد على المورد والبلد والباقة والحقوق. لهذا يقدم Stramify شرحاً واضحاً يساعدك على اختيار العرض المناسب دون مبالغة.',
+      ]],
+      ['باقات حسب الحاجة', [
+        'للاستعمال الخفيف في شقة أو رياض قد تكفي Start. للعائلة أو الاستعمال المنتظم يمكن أن تكون Plus أو Premium أكثر راحة. صفحة الأسعار والأسئلة الشائعة تساعدانك قبل التواصل.',
+      ]],
+    ],
+  },
+  '/tarifs': {
+    h1: 'أسعار Stramify',
+    title: 'أسعار Stramify | اشتراك TV المغرب',
+    description: 'قارن بين Stramify Start وPlus وPremium. باقات سنوية، تجربة 24 ساعة عبر WhatsApp، تفعيل سريع ومساعدة في التثبيت.',
+    eyebrow: 'الأسعار',
+    intro: 'قارن بين باقات Stramify حسب عدد الأجهزة، سرعة الاتصال واحتياجاتك في الاستعمال والدعم.',
+    sections: [
+      ['كيف تقارن بين العروض', [
+        'لا يجب أن يكون السعر هو المعيار الوحيد. قبل اختيار اشتراك مشاهدة عبر الإنترنت، راجع عدد الأجهزة والجودة المطلوبة وحاجتك للدعم. مستخدم يريد جهازاً واحداً لا يملك نفس احتياجات عائلة تستعمل أكثر من شاشة.',
+        'Stramify Start مناسب للبداية. Stramify Plus هو الأكثر طلباً لأنه يوفر مرونة أكبر حسب التوافق. Stramify Premium يركز على تجربة أكثر اكتمالاً وإعداد مخصص ودعم أولوية.',
+      ]],
+      ['لماذا تطلب تجربة 24 ساعة', [
+        'تجربة 24 ساعة عبر WhatsApp تساعد على اختبار الاتصال والجهاز وسهولة الاستعمال قبل الاختيار النهائي. جودة HD أو Full HD أو 4K تعتمد على الظروف التقنية لديك.',
+        'بعد التجربة يمكن للدعم اقتراح الباقة الأنسب. المحتويات المتاحة قد تختلف حسب العروض والحقوق، والوضوح في هذه النقطة يساعدك على اتخاذ قرار بثقة.',
+      ]],
+    ],
+  },
+  '/comparatif-offres': {
+    h1: 'مقارنة عروض Stramify',
+    title: 'مقارنة عروض Stramify | Start Plus Premium',
+    description: 'قارن بين عروض Stramify Start وPlus وPremium لاختيار اشتراك مشاهدة مناسب لاستعمالك في المغرب.',
+    eyebrow: 'مقارنة',
+    intro: 'هذه الصفحة تشرح الفرق بين باقات Stramify بطريقة عملية وواضحة.',
+    sections: [
+      ['Start أو Plus أو Premium', [
+        'Stramify Start مناسب لمن يريد حلاً بسيطاً على جهاز واحد مع تفعيل سريع ودعم في التثبيت. إنه اختيار واضح للاستعمال الشخصي أو أول تجربة.',
+        'Stramify Plus هو الأكثر طلباً لأنه يناسب كثيراً من الأسر التي تريد مرونة أكبر حتى جهازين وجودة حسب التوافق. أما Stramify Premium فهو للمستخدم الذي يريد مرافقة مخصصة ودعماً أولوياً.',
+      ]],
+      ['اختر حسب استعمالك الحقيقي', [
+        'سرعة الإنترنت ونوع الجهاز وطريقة المشاهدة تؤثر كثيراً على النتيجة. Smart TV حديثة واتصال مستقر وإعداد صحيح تعطي غالباً تجربة أفضل. لذلك يساعدك الدعم عبر WhatsApp على المقارنة قبل الدفع.',
+        'المقارنة العملية تعتمد على عدد الأجهزة، المساعدة، الجودة حسب التوافق ومدة الوصول 12 شهراً. قد تختلف المحتويات حسب العروض والحقوق المتاحة، ويجب فهم ذلك قبل التفعيل.',
+      ]],
+    ],
+  },
+};
+
 const legalPages = {
   '/politique-de-confidentialite': {
     h1: 'Politique de confidentialité',
@@ -1186,15 +1505,75 @@ const legalPages = {
   },
 };
 
-function getRoute(path) {
+const legalPagesAr = {
+  '/politique-de-confidentialite': {
+    h1: 'سياسة الخصوصية',
+    title: 'سياسة الخصوصية | Stramify',
+    description: 'سياسة الخصوصية الخاصة بـ Stramify.',
+    eyebrow: 'الخصوصية',
+    intro: 'توضح هذه الصفحة المبادئ العامة التي يعتمدها Stramify لحماية بيانات التواصل.',
+    sections: [['بيانات التواصل', ['تستعمل المعلومات المرسلة عبر WhatsApp فقط للرد على طلبات التجربة والتفعيل والتثبيت والدعم. ننصح بعدم إرسال معلومات حساسة غير ضرورية.']]],
+  },
+  '/conditions-utilisation': {
+    h1: 'شروط الاستخدام',
+    title: 'شروط الاستخدام | Stramify',
+    description: 'شروط استخدام Stramify.',
+    eyebrow: 'الشروط',
+    intro: 'باستخدام Stramify، يوافق العميل على التحقق من توافق جهازه واستعمال الخدمة بشكل قانوني في بلده.',
+    sections: [['استعمال مسؤول', ['قد تختلف المحتويات والقنوات حسب المورد والبلد وحقوق البث. يجب على المستخدم احترام القواعد المطبقة في منطقته.']]],
+  },
+  '/politique-remboursement': {
+    h1: 'سياسة الاسترجاع',
+    title: 'سياسة الاسترجاع | Stramify',
+    description: 'سياسة الاسترجاع الخاصة بـ Stramify.',
+    eyebrow: 'الاسترجاع',
+    intro: 'ينصح Stramify بتجربة 24 ساعة للتحقق من التوافق قبل اختيار أي باقة.',
+    sections: [['قبل الاشتراك', ['يساعدك الدعم على اختبار الجودة والاتصال والتثبيت. تتم معالجة الطلبات الخاصة حالة بحالة عبر WhatsApp.']]],
+  },
+};
+
+function getRoute(path, lang) {
+  const pages = lang === 'ar' ? seoPagesAr : seoPages;
+  const legal = lang === 'ar' ? legalPagesAr : legalPages;
+  const routeMeta = {
+    fr: {
+      installation: {
+        title: 'Guide d’installation Stramify',
+        description: 'Guide d’installation Stramify sur Smart TV, Android TV, Firestick, téléphone Android, iPhone, iPad et PC.',
+      },
+      faq: {
+        title: 'FAQ Stramify | Questions fréquentes',
+        description: 'Réponses aux questions fréquentes Stramify : essai 24h, activation, appareils compatibles, paiement, installation et support.',
+      },
+      contact: {
+        title: 'Contact Stramify | WhatsApp support',
+        description: 'Contactez Stramify sur WhatsApp pour l’essai 24h, l’activation, le choix du forfait et l’installation.',
+      },
+    },
+    ar: {
+      installation: {
+        title: 'دليل تثبيت Stramify',
+        description: 'دليل تثبيت Stramify على Smart TV وAndroid TV وFirestick وهاتف Android وiPhone وiPad والكمبيوتر.',
+      },
+      faq: {
+        title: 'الأسئلة الشائعة | Stramify',
+        description: 'إجابات حول تجربة 24 ساعة، التفعيل، الأجهزة المتوافقة، الدفع، التثبيت والدعم عبر WhatsApp.',
+      },
+      contact: {
+        title: 'اتصل بنا | دعم Stramify عبر WhatsApp',
+        description: 'تواصل مع Stramify عبر WhatsApp للتجربة، التفعيل، اختيار الباقة والتثبيت.',
+      },
+    },
+  }[lang];
+
   if (path === '/') return { type: 'home' };
-  if (path === '/tarifs') return { type: 'pricing', page: seoPages['/tarifs'] };
-  if (path === '/installation') return { type: 'installation', title: 'Guide d’installation Stramify', description: 'Guide d’installation Stramify sur Smart TV, Android TV, Firestick, téléphone Android, iPhone, iPad et PC.' };
-  if (path === '/faq') return { type: 'faq', title: 'FAQ Stramify | Questions fréquentes', description: 'Réponses aux questions fréquentes Stramify : essai 24h, activation, appareils compatibles, paiement, installation et support.' };
-  if (path === '/contact') return { type: 'contact', title: 'Contact Stramify | WhatsApp support', description: 'Contactez Stramify sur WhatsApp pour l’essai 24h, l’activation, le choix du forfait et l’installation.' };
-  if (seoPages[path]) return { type: 'seo', page: seoPages[path] };
-  if (legalPages[path]) return { type: 'seo', page: legalPages[path] };
-  return { type: 'seo', page: seoPages['/abonnement-tv-maroc'] };
+  if (path === '/tarifs') return { type: 'pricing', page: pages['/tarifs'] };
+  if (path === '/installation') return { type: 'installation', ...routeMeta.installation };
+  if (path === '/faq') return { type: 'faq', ...routeMeta.faq };
+  if (path === '/contact') return { type: 'contact', ...routeMeta.contact };
+  if (pages[path]) return { type: 'seo', page: pages[path] };
+  if (legal[path]) return { type: 'seo', page: legal[path] };
+  return { type: 'seo', page: pages['/abonnement-tv-maroc'] };
 }
 
 function App() {
@@ -1204,7 +1583,7 @@ function App() {
   });
   const [path, setPath] = useState(() => window.location.pathname);
   const t = translations[lang];
-  const route = getRoute(path);
+  const route = useMemo(() => getRoute(path, lang), [path, lang]);
 
   useEffect(() => {
     const onPop = () => setPath(window.location.pathname);
@@ -1215,38 +1594,39 @@ function App() {
   useEffect(() => {
     document.documentElement.lang = t.locale;
     document.documentElement.dir = t.dir;
+    document.body.dir = t.dir;
     localStorage.setItem('stramify-lang', lang);
 
     if (route.type === 'home') {
-      updateSeo({ title: t.seoTitle, description: t.seoDescription, path: '/', ogLocale: t.ogLocale, faqs: faqItems.slice(0, 6) });
+      updateSeo({ title: t.seoTitle, description: t.seoDescription, path: '/', ogLocale: t.ogLocale, faqs: faqItems[lang].slice(0, 6) });
     } else if (route.type === 'installation') {
-      updateSeo({ title: route.title, description: route.description, path, ogLocale: t.ogLocale, breadcrumbs: [{ name: 'Accueil', path: '/' }, { name: 'Installation', path }] });
+      updateSeo({ title: route.title, description: route.description, path, ogLocale: t.ogLocale, breadcrumbs: [{ name: t.nav.home, path: '/' }, { name: t.nav.installation, path }] });
     } else if (route.type === 'faq') {
-      updateSeo({ title: route.title, description: route.description, path, ogLocale: t.ogLocale, faqs: faqItems, breadcrumbs: [{ name: 'Accueil', path: '/' }, { name: 'FAQ', path }] });
+      updateSeo({ title: route.title, description: route.description, path, ogLocale: t.ogLocale, faqs: faqItems[lang], breadcrumbs: [{ name: t.nav.home, path: '/' }, { name: t.nav.faq, path }] });
     } else if (route.type === 'contact') {
-      updateSeo({ title: route.title, description: route.description, path, ogLocale: t.ogLocale, breadcrumbs: [{ name: 'Accueil', path: '/' }, { name: 'Contact', path }] });
+      updateSeo({ title: route.title, description: route.description, path, ogLocale: t.ogLocale, breadcrumbs: [{ name: t.nav.home, path: '/' }, { name: t.nav.contact, path }] });
     } else if (route.type === 'pricing') {
-      updateSeo({ title: route.page.title, description: route.page.description, path, ogLocale: t.ogLocale, breadcrumbs: [{ name: 'Accueil', path: '/' }, { name: 'Tarifs', path }] });
+      updateSeo({ title: route.page.title, description: route.page.description, path, ogLocale: t.ogLocale, breadcrumbs: [{ name: t.nav.home, path: '/' }, { name: t.nav.pricing, path }] });
     } else {
-      updateSeo({ title: route.page.title, description: route.page.description, path, ogLocale: t.ogLocale, breadcrumbs: [{ name: 'Accueil', path: '/' }, { name: route.page.h1, path }] });
+      updateSeo({ title: route.page.title, description: route.page.description, path, ogLocale: t.ogLocale, breadcrumbs: [{ name: t.nav.home, path: '/' }, { name: route.page.h1, path }] });
     }
   }, [lang, path, route, t]);
 
   const content = useMemo(() => {
     if (route.type === 'home') return <HomePage lang={lang} t={t} />;
-    if (route.type === 'installation') return <InstallationPage />;
-    if (route.type === 'faq') return <FaqPage />;
-    if (route.type === 'contact') return <ContactPage />;
+    if (route.type === 'installation') return <InstallationPage lang={lang} t={t} />;
+    if (route.type === 'faq') return <FaqPage lang={lang} t={t} />;
+    if (route.type === 'contact') return <ContactPage lang={lang} t={t} />;
     if (route.type === 'pricing') return <TarifsPage lang={lang} t={t} page={route.page} />;
-    return <SeoPage page={route.page} />;
+    return <SeoPage page={route.page} lang={lang} t={t} />;
   }, [lang, route, t]);
 
   return (
     <>
       <Header lang={lang} setLang={setLang} t={t} />
-      <main>{content}</main>
+      <main dir={t.dir}>{content}</main>
       <Footer t={t} />
-      <FloatingWhatsApp />
+      <FloatingWhatsApp t={t} />
     </>
   );
 }
