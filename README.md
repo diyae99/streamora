@@ -1,6 +1,6 @@
-# Streamora
+# Stramify
 
-Landing page React + Vite + Tailwind CSS pour Streamora, une expérience premium de streaming légal orientée sport, football live, grands matchs, divertissement et événements sportifs internationaux.
+Landing page React + Vite + Tailwind CSS pour Stramify, une solution TV en ligne au Maroc avec essai 24h via WhatsApp, activation rapide et assistance d’installation.
 
 ## Installation
 
@@ -46,7 +46,7 @@ Le dossier de sortie est `dist`.
 Le numéro WhatsApp est défini dans `src/main.jsx` :
 
 ```js
-const WHATSAPP_NUMBER = "212600000000";
+const WHATSAPP_NUMBER = "212699904956";
 ```
 
 Les contenus principaux sont organisés dans des tableaux d’objets pour faciliter les modifications : navigation, fonctionnalités, appareils, tarifs, avantages et FAQ.

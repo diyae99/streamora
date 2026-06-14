@@ -1,4 +1,4 @@
-# Streamora SEO Keywords Plan
+# Stramify SEO Keywords Plan
 
 ## Primary Keywords
 
@@ -44,7 +44,7 @@
 ## Suggested Blog Or Page Ideas
 
 - Comment choisir un abonnement TV en ligne au Maroc
-- Guide d’installation Streamora sur Smart TV
+- Guide d’installation Stramify sur Smart TV
 - Comment regarder TV en ligne Maroc sur Android
 - Activation rapide TV : étapes et conseils
 - مقارنة بين طرق مشاهدة التلفاز عبر الإنترنت في المغرب
@@ -53,7 +53,7 @@
 ## Backlink Strategy Without Spam
 
 - Prioritize local, relevant, human-reviewed listings.
-- Build profiles with consistent Streamora branding and the official website URL.
+- Build profiles with consistent Stramify branding and the official website URL.
 - Publish practical setup guides that Moroccan tech blogs can reference naturally.
 - Partner with phone, Smart TV, and TV box shops for legitimate local mentions.
 - Avoid paid spam backlinks, automated backlink tools, private blog networks, comment spam, and misleading anchor text.

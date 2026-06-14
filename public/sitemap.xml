@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://streamora-nine.vercel.app/</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://streamora-nine.vercel.app/" />
-    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://streamora-nine.vercel.app/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://streamora-nine.vercel.app/" />
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://stramify.com/</loc><lastmod>2026-06-14</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://stramify.com/abonnement-tv-maroc</loc><lastmod>2026-06-14</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://stramify.com/iptv-maroc</loc><lastmod>2026-06-14</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://stramify.com/iptv-4k-maroc</loc><lastmod>2026-06-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://stramify.com/iptv-tanger</loc><lastmod>2026-06-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://stramify.com/iptv-casablanca</loc><lastmod>2026-06-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://stramify.com/iptv-rabat</loc><lastmod>2026-06-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://stramify.com/iptv-marrakech</loc><lastmod>2026-06-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://stramify.com/tarifs</loc><lastmod>2026-06-14</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://stramify.com/installation</loc><lastmod>2026-06-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://stramify.com/faq</loc><lastmod>2026-06-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://stramify.com/contact</loc><lastmod>2026-06-14</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://stramify.com/comparatif-offres</loc><lastmod>2026-06-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

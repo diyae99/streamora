@@ -1,8 +1,8 @@
-# Streamora Backlink Outreach Plan
+# Stramify Backlink Outreach Plan
 
-- Create and verify a Google Business Profile if Streamora has a legitimate service area and contact process.
+- Create and verify a Google Business Profile if Stramify has a legitimate service area and contact process.
 - Submit the website to reputable local Moroccan directories with accurate business information.
-- Create consistent social profiles using the Streamora name and website link.
+- Create consistent social profiles using the Stramify name and website link.
 - Add the website link to the official Facebook page.
 - Add the website link to the Instagram bio.
 - Add the website link to the TikTok bio.

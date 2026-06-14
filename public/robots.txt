@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://streamora-nine.vercel.app/sitemap.xml
+Sitemap: https://stramify.com/sitemap.xml
