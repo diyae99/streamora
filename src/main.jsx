@@ -783,10 +783,10 @@ function SeoPage({ page }) {
       </section>
       <section className="bg-soft px-4 py-14 sm:px-6 lg:px-8">
         <article className="prose-like mx-auto max-w-4xl rounded-[1.5rem] bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-8">
-          {page.sections.map((section) => (
-            <div key={section.title} className="mb-8 last:mb-0">
-              <h2 className="text-2xl font-black text-navy">{section.title}</h2>
-              {section.paragraphs.map((paragraph) => (
+          {page.sections.map(([title, paragraphs]) => (
+            <div key={title} className="mb-8 last:mb-0">
+              <h2 className="text-2xl font-black text-navy">{title}</h2>
+              {paragraphs.map((paragraph) => (
                 <p key={paragraph.slice(0, 50)} className="mt-4 leading-8 text-muted">{paragraph}</p>
               ))}
             </div>
@@ -891,10 +891,10 @@ function TarifsPage({ lang, t, page }) {
       <PricingSection lang={lang} t={t} />
       <section className="bg-white px-4 py-14 sm:px-6 lg:px-8">
         <article className="prose-like mx-auto max-w-4xl rounded-[1.5rem] bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-8">
-          {page.sections.map((section) => (
-            <div key={section.title} className="mb-8 last:mb-0">
-              <h2 className="text-2xl font-black text-navy">{section.title}</h2>
-              {section.paragraphs.map((paragraph) => (
+          {page.sections.map(([title, paragraphs]) => (
+            <div key={title} className="mb-8 last:mb-0">
+              <h2 className="text-2xl font-black text-navy">{title}</h2>
+              {paragraphs.map((paragraph) => (
                 <p key={paragraph.slice(0, 50)} className="mt-4 leading-8 text-muted">{paragraph}</p>
               ))}
             </div>
