@@ -89,8 +89,8 @@ const translations = {
     devicesTitle: 'Compatible avec vos appareils du quotidien',
     devices: ['Smart TV', 'Android TV / Box', 'Firestick', 'iPhone & iPad', 'Android Mobile', 'Windows & Mac'],
     pricingTitle: 'Forfaits Stramify',
-    pricingSubtitle: 'Des offres simples pour choisir selon votre usage, votre connexion et vos appareils.',
-    pricingNote: 'Le choix du forfait dépend du nombre d’appareils, de votre connexion Internet et de vos besoins d’utilisation.',
+    pricingSubtitle: 'Des offres simples pour choisir selon votre durée, votre connexion et vos besoins d’utilisation.',
+    pricingNote: 'Chaque forfait permet une utilisation sur 1 appareil à la fois. Le choix dépend de votre durée, de votre connexion Internet et de vos besoins de contenus.',
     popular: 'Le plus demandé',
     planCta: 'Demander cette offre',
     promoTitle: 'Essai 24h via WhatsApp',
@@ -185,8 +185,8 @@ const translations = {
     devicesTitle: 'متوافق مع أجهزتك اليومية',
     devices: ['Smart TV', 'Android TV / Box', 'Firestick', 'iPhone وiPad', 'Android Mobile', 'Windows وMac'],
     pricingTitle: 'باقات Stramify',
-    pricingSubtitle: 'قارن بين باقات Stramify حسب عدد الأجهزة، سرعة الاتصال واحتياجاتك في الاستعمال والدعم.',
-    pricingNote: 'اختيار الباقة يعتمد على عدد الأجهزة وسرعة الإنترنت واحتياجات الاستخدام.',
+    pricingSubtitle: 'قارن بين باقات Stramify حسب المدة، سرعة الاتصال واحتياجاتك في الاستعمال والدعم.',
+    pricingNote: 'كل باقة تعمل على جهاز واحد في نفس الوقت. اختيار الباقة يعتمد على المدة وسرعة الإنترنت واحتياجات المحتوى.',
     popular: 'الأكثر طلبا',
     planCta: 'اطلب هذا العرض',
     promoTitle: 'تجربة 24 ساعة عبر واتساب',
@@ -247,50 +247,64 @@ const translations = {
 const pricingPlans = {
   fr: [
     {
-      name: 'Stramify Start',
-      price: '200 DH',
-      period: '/ an',
-      tag: 'Pour commencer',
-      features: ['1 appareil', 'Qualité HD / Full HD selon connexion', 'Activation rapide via WhatsApp', 'Support installation', 'Accès 12 mois'],
+      name: 'Pack 6 mois',
+      price: '199 DH',
+      period: '',
+      tag: 'L’essentiel pour découvrir le service',
+      features: ['20 000+ chaînes en direct', 'Films et séries à la demande', 'Qualité HD & Full HD', 'Utilisation sur 1 appareil à la fois', 'Assistance d’installation incluse'],
     },
     {
-      name: 'Stramify Plus',
-      price: '300 DH',
-      period: '/ an',
-      tag: 'Le plus demandé',
+      name: 'Pack 12 mois',
+      price: '299 DH',
+      period: '',
+      tag: 'Le meilleur équilibre pour toute l’année',
       highlighted: true,
-      features: ['Jusqu’à 2 appareils', 'Qualité Full HD / 4K selon compatibilité', 'Replay selon disponibilité', 'Assistance prioritaire', 'Accès 12 mois'],
+      features: ['20 000+ chaînes en direct', 'Films et séries à la demande', 'Qualité HD, Full HD & 4K selon disponibilité', 'Utilisation sur 1 appareil à la fois', 'Support prioritaire sur WhatsApp'],
     },
     {
-      name: 'Stramify Premium',
-      price: '500 DH',
-      period: '/ an',
-      tag: 'Expérience complète',
-      features: ['Offre complète', 'Qualité optimale selon appareil', 'Support prioritaire', 'Configuration personnalisée', 'Accès 12 mois'],
+      name: 'Pack Premium',
+      price: '399 DH',
+      period: '',
+      tag: 'Plus de confort et de contenus premium',
+      features: ['Sélection étendue de chaînes', 'Catalogue VOD premium enrichi', 'Qualité jusqu’à 4K Ultra HD selon disponibilité', 'Replay disponible sur une sélection', 'Utilisation sur 1 appareil à la fois', 'Support Premium prioritaire'],
+    },
+    {
+      name: 'Pack VIP',
+      price: '499 DH',
+      period: '',
+      tag: 'Notre expérience la plus complète',
+      features: ['Accès à la sélection la plus complète', 'Bibliothèque VOD complète', 'Qualité 4K selon disponibilité', 'Replay et mises à jour prioritaires', 'Utilisation sur 1 appareil à la fois', 'Accompagnement VIP personnalisé'],
     },
   ],
   ar: [
     {
-      name: 'Stramify Start',
-      price: '200 DH',
-      period: '/ السنة',
-      tag: 'مناسب للبدء',
-      features: ['جهاز واحد', 'جودة HD / Full HD حسب الاتصال', 'تفعيل سريع عبر WhatsApp', 'دعم في التثبيت', 'اشتراك لمدة 12 شهراً'],
+      name: 'باقة 6 أشهر',
+      price: '199 DH',
+      period: '',
+      tag: 'اختيار مناسب لتجربة الخدمة',
+      features: ['أكثر من 20,000 قناة مباشرة', 'أفلام ومسلسلات حسب الطلب', 'جودة HD و Full HD', 'الاستخدام على جهاز واحد في نفس الوقت', 'مساعدة في التثبيت مضمونة'],
     },
     {
-      name: 'Stramify Plus',
-      price: '300 DH',
-      period: '/ السنة',
-      tag: 'الأكثر طلباً',
+      name: 'باقة 12 شهر',
+      price: '299 DH',
+      period: '',
+      tag: 'أفضل اختيار لسنة كاملة',
       highlighted: true,
-      features: ['حتى جهازين', 'جودة Full HD / 4K حسب التوافق', 'Replay حسب التوفر', 'دعم سريع', 'اشتراك لمدة 12 شهراً'],
+      features: ['أكثر من 20,000 قناة مباشرة', 'أفلام ومسلسلات حسب الطلب', 'جودة HD و Full HD و 4K حسب التوفر', 'الاستخدام على جهاز واحد في نفس الوقت', 'دعم أولوية عبر واتساب'],
     },
     {
-      name: 'Stramify Premium',
-      price: '500 DH',
-      period: '/ السنة',
-      tag: 'التجربة الكاملة',
-      features: ['عرض كامل', 'جودة ممتازة حسب الجهاز', 'دعم أولوية', 'إعداد مخصص', 'اشتراك لمدة 12 شهراً'],
+      name: 'باقة Premium',
+      price: '399 DH',
+      period: '',
+      tag: 'محتوى أكثر وتجربة أفضل',
+      features: ['تشكيلة موسعة من القنوات', 'مكتبة VOD Premium محدثة', 'جودة تصل إلى 4K Ultra HD حسب التوفر', 'Replay متوفر على مجموعة مختارة', 'الاستخدام على جهاز واحد في نفس الوقت', 'دعم Premium بأولوية'],
+    },
+    {
+      name: 'باقة VIP',
+      price: '499 DH',
+      period: '',
+      tag: 'التجربة الأكثر اكتمالاً',
+      features: ['الوصول إلى أكبر تشكيلة من المحتوى', 'مكتبة VOD كاملة', 'جودة 4K حسب التوفر', 'Replay وتحديثات بأولوية', 'الاستخدام على جهاز واحد في نفس الوقت', 'مرافقة VIP شخصية'],
     },
   ],
 };
@@ -301,7 +315,7 @@ const faqItems = {
     ['Comment activer mon abonnement ?', 'Après le choix du forfait et la confirmation, Stramify prépare l’accès et vous envoie les instructions d’activation sur WhatsApp.'],
     ['Quels appareils sont compatibles ?', 'Le service est compatible avec Smart TV, Android TV, Firestick, téléphone Android, iPhone, iPad et PC selon la configuration disponible.'],
     ['Quelle connexion Internet est recommandée ?', 'Une connexion stable est recommandée. La qualité HD, Full HD ou 4K dépend de votre débit, de votre appareil et de la compatibilité.'],
-    ['Puis-je utiliser plusieurs appareils ?', 'Oui selon le forfait choisi. Stramify Start est prévu pour 1 appareil, Stramify Plus jusqu’à 2 appareils et Premium pour une expérience plus complète.'],
+    ['Comment fonctionne l’utilisation sur appareil ?', 'Chaque forfait Stramify permet une utilisation sur 1 appareil à la fois. Le support vous aide à configurer correctement l’appareil choisi.'],
     ['Comment se fait le paiement ?', 'Le support vous confirme le forfait, les étapes et les moyens disponibles avant activation. Les tarifs sont présentés clairement.'],
     ['Combien de temps prend l’installation ?', 'L’installation est généralement rapide si l’appareil est prêt et connecté à Internet. Le support vous guide étape par étape.'],
     ['Que faire si le service ne fonctionne pas ?', 'Contactez le support WhatsApp. Nous vérifions la connexion, l’application, l’appareil et la configuration pour vous aider.'],
@@ -313,7 +327,7 @@ const faqItems = {
     ['كيف يتم تفعيل الاشتراك؟', 'بعد اختيار الباقة والتأكيد، يقوم فريق Stramify بتجهيز الوصول وإرسال تعليمات التفعيل عبر WhatsApp.'],
     ['ما هي الأجهزة المتوافقة؟', 'الخدمة متوافقة مع Smart TV وAndroid TV وFirestick وهاتف Android وiPhone وiPad والكمبيوتر حسب الإعداد المتوفر.'],
     ['ما هي سرعة الإنترنت المناسبة؟', 'ننصح باتصال مستقر. جودة HD أو Full HD أو 4K تعتمد على سرعة الاتصال والجهاز والتوافق.'],
-    ['هل يمكن استعمال الاشتراك على أكثر من جهاز؟', 'نعم حسب الباقة المختارة. Stramify Start لجهاز واحد، وStramify Plus حتى جهازين، وPremium لتجربة أكثر اكتمالاً.'],
+    ['كيف يعمل الاستخدام على الجهاز؟', 'كل باقة من Stramify تعمل على جهاز واحد في نفس الوقت. يساعدك الدعم على إعداد الجهاز الذي تختاره بطريقة صحيحة.'],
     ['كيف يتم الدفع؟', 'يؤكد لك فريق الدعم الباقة والخطوات والوسائل المتاحة قبل التفعيل. الأسعار معروضة بوضوح.'],
     ['كم يستغرق التثبيت؟', 'عادة يكون التثبيت سريعاً إذا كان الجهاز جاهزاً ومتصلًا بالإنترنت. الدعم يرافقك خطوة بخطوة.'],
     ['ماذا أفعل إذا لم يشتغل الاشتراك؟', 'تواصل مع الدعم عبر WhatsApp. نراجع الاتصال والتطبيق والجهاز والإعدادات لمساعدتك.'],
@@ -797,13 +811,12 @@ function PricingSection({ lang, t }) {
   return (
     <section id="tarifs" className="section bg-soft">
       <SectionHeader lang={lang} title={t.pricingTitle} subtitle={t.pricingSubtitle} />
-      <div className="mx-auto grid max-w-7xl gap-5 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-5 px-4 sm:px-6 md:grid-cols-2 xl:grid-cols-4 lg:px-8">
         {plans.map((plan) => (
           <article key={plan.name} className={`pricing-card ${plan.highlighted ? 'pricing-card-popular' : ''} ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
-            <span className={plan.highlighted ? 'popular-pill' : 'mb-4 inline-flex w-fit rounded-full bg-red-50 px-3 py-1 text-xs font-black uppercase tracking-[0.1em] text-primary'}>
-              {plan.highlighted ? t.popular : plan.tag}
-            </span>
+            {plan.highlighted && <span className="popular-pill">{t.popular}</span>}
             <h3 className="text-2xl font-black text-navy">{plan.name}</h3>
+            <p className="mt-3 min-h-12 text-sm font-bold leading-6 text-primary">{plan.tag}</p>
             <div className="mt-6 flex items-end gap-1">
               <strong className="text-4xl font-black text-navy">{plan.price}</strong>
               <span className="pb-1 text-sm font-bold text-muted">{plan.period}</span>
@@ -1141,7 +1154,7 @@ const seoPages = {
         'La qualité HD, Full HD ou 4K dépend de votre connexion Internet, du modèle d’appareil et de la compatibilité de l’application utilisée. Stramify recommande de tester d’abord avec l’essai 24h gratuit afin de vérifier la stabilité, la fluidité et la simplicité d’utilisation avant de choisir un forfait annuel.',
       ]],
       ['Bien choisir son forfait', [
-        'Le bon forfait dépend principalement du nombre d’appareils, de la qualité souhaitée, de votre connexion et de votre besoin d’assistance. Une personne seule peut privilégier Stramify Start, tandis qu’un foyer avec plusieurs usages peut préférer Stramify Plus ou Premium. Pour comparer les offres, consultez la page tarifs, puis demandez conseil sur WhatsApp.',
+        'Le bon forfait dépend principalement de la durée souhaitée, de la qualité recherchée, de votre connexion et de votre besoin d’assistance. Tous les packs fonctionnent avec une utilisation sur 1 appareil à la fois. Pour comparer les offres, consultez la page tarifs, puis demandez conseil sur WhatsApp.',
       ]],
     ],
   },
@@ -1161,7 +1174,7 @@ const seoPages = {
         'Pour une Smart TV récente, l’installation peut être très rapide. Sur une box Android ou un Firestick, quelques étapes supplémentaires peuvent être nécessaires. Sur mobile ou PC, le support vous oriente selon votre niveau de confort et votre objectif d’utilisation.',
       ]],
       ['Comparer avant de choisir', [
-        'Avant de sélectionner un forfait, vérifiez le nombre d’appareils, la qualité attendue et votre besoin d’accompagnement. La page tarifs détaille Stramify Start, Plus et Premium. La page installation explique les principaux appareils, tandis que la FAQ répond aux questions sur paiement, activation et compatibilité.',
+        'Avant de sélectionner un forfait, vérifiez la durée souhaitée, la qualité attendue et votre besoin d’accompagnement. La page tarifs détaille les packs 6 mois, 12 mois, Premium et VIP. La page installation explique les principaux appareils, tandis que la FAQ répond aux questions sur paiement, activation et compatibilité.',
       ]],
     ],
   },
@@ -1181,7 +1194,7 @@ const seoPages = {
         'Le support Stramify peut aussi vous aider à vérifier l’application utilisée, la qualité sélectionnée et le comportement de votre appareil. L’objectif est d’obtenir une expérience confortable, pas de promettre une qualité irréaliste dans toutes les situations.',
       ]],
       ['Choisir le forfait adapté', [
-        'Si la qualité d’image est votre priorité, comparez Stramify Plus et Premium. Le choix dépend aussi du nombre d’appareils et de votre besoin de configuration personnalisée. La page tarifs donne les détails, et la page installation vous aide à préparer Smart TV, Android TV, Firestick, téléphone ou PC.',
+        'Si la qualité d’image est votre priorité, comparez Pack 12 mois, Pack Premium et Pack VIP. Le choix dépend aussi de la durée souhaitée et de votre besoin de configuration personnalisée. Chaque offre prévoit une utilisation sur 1 appareil à la fois. La page tarifs donne les détails, et la page installation vous aide à préparer Smart TV, Android TV, Firestick, téléphone ou PC.',
       ]],
     ],
   },
@@ -1201,7 +1214,7 @@ const seoPages = {
         'Les contenus accessibles peuvent varier selon l’offre, le fournisseur, le pays et les droits de diffusion. Stramify préfère expliquer cette réalité plutôt que d’utiliser un discours agressif. Vous savez ainsi ce que vous testez et vous choisissez un forfait selon vos besoins réels.',
       ]],
       ['Comparer les offres depuis Tanger', [
-        'Pour une utilisation simple sur un appareil, Stramify Start peut suffire. Pour un foyer qui souhaite plus de confort ou plusieurs usages, Plus ou Premium peuvent être plus adaptés. Consultez les tarifs, le guide d’installation et la FAQ avant de contacter le support WhatsApp.',
+        'Pour une utilisation simple sur un appareil, Pack 6 mois peut suffire pour découvrir le service. Pour une année complète ou une sélection plus étendue, Pack 12 mois, Premium ou VIP peuvent être plus adaptés. Consultez les tarifs, le guide d’installation et la FAQ avant de contacter le support WhatsApp.',
       ]],
     ],
   },
@@ -1221,7 +1234,7 @@ const seoPages = {
         'Stramify évite les promesses irréalistes. Les contenus et chaînes peuvent varier selon les offres disponibles, les fournisseurs et les droits de diffusion. Notre rôle est de vous accompagner dans la configuration, la compatibilité et le choix du forfait le plus raisonnable.',
       ]],
       ['Choisir son forfait à Casablanca', [
-        'Pour un usage individuel, Start peut être suffisant. Pour une famille ou un logement où deux appareils sont parfois utilisés, Plus peut être plus confortable. Premium s’adresse aux utilisateurs qui veulent une assistance plus personnalisée. Les pages tarifs, installation et FAQ détaillent les choix possibles.',
+        'Pour découvrir le service, Pack 6 mois peut être suffisant. Pour une année complète, Pack 12 mois offre un bon équilibre. Premium et VIP s’adressent aux utilisateurs qui veulent une sélection plus riche et une assistance plus personnalisée. Chaque pack fonctionne avec une utilisation sur 1 appareil à la fois.',
       ]],
     ],
   },
@@ -1241,7 +1254,7 @@ const seoPages = {
         'Nous restons prudents sur les contenus. Les chaînes et catalogues peuvent varier selon le fournisseur, le pays et les droits de diffusion. Stramify ne vend pas une promesse exagérée, mais un accompagnement clair pour accéder à une solution TV selon les offres disponibles.',
       ]],
       ['Une offre lisible pour Rabat', [
-        'La page tarifs présente trois forfaits annuels : Start, Plus et Premium. Le bon choix dépend du nombre d’appareils, de la qualité recherchée et de votre besoin de support. Pour toute hésitation, le contact WhatsApp reste le moyen le plus rapide d’obtenir une recommandation.',
+        'La page tarifs présente quatre packs : 6 mois, 12 mois, Premium et VIP. Le bon choix dépend de la durée, de la qualité recherchée et de votre besoin de support. Tous les packs fonctionnent avec une utilisation sur 1 appareil à la fois. Pour toute hésitation, le contact WhatsApp reste le moyen le plus rapide d’obtenir une recommandation.',
       ]],
     ],
   },
@@ -1261,20 +1274,20 @@ const seoPages = {
         'Les contenus disponibles dépendent toujours du fournisseur, du pays, du forfait et des droits. Stramify garde un discours clair : l’objectif est de vous aider à configurer une solution TV en ligne et à choisir l’offre qui correspond à votre usage.',
       ]],
       ['Forfaits adaptés aux besoins', [
-        'Pour un usage occasionnel dans un appartement ou un riad, Start peut convenir. Pour une famille ou un usage plus régulier, Plus ou Premium peut offrir plus de confort. La page tarifs explique les différences, et la FAQ répond aux questions avant contact.',
+        'Pour un usage occasionnel dans un appartement ou un riad, Pack 6 mois peut convenir. Pour une année complète ou une expérience plus riche, Pack 12 mois, Premium ou VIP peuvent offrir plus de confort. La page tarifs explique les différences, et la FAQ répond aux questions avant contact.',
       ]],
     ],
   },
   '/tarifs': {
     h1: 'Tarifs Stramify',
     title: 'Tarifs Stramify | Abonnement TV Maroc',
-    description: 'Comparez Stramify Start, Plus et Premium. Forfaits annuels, essai 24h via WhatsApp, activation rapide et assistance installation.',
+    description: 'Comparez les packs Stramify 6 mois, 12 mois, Premium et VIP. Essai 24h via WhatsApp, activation rapide et assistance installation.',
     eyebrow: 'Tarifs',
-    intro: 'Comparez les forfaits Stramify selon votre nombre d’appareils, votre connexion Internet et vos besoins d’assistance.',
+    intro: 'Comparez les forfaits Stramify selon votre durée, votre connexion Internet et vos besoins d’assistance.',
     sections: [
       ['Comment comparer les offres', [
-        'Le prix ne doit pas être le seul critère. Pour choisir un abonnement TV en ligne, vérifiez d’abord le nombre d’appareils, la qualité attendue et votre besoin de support. Une personne qui veut tester sur une seule Smart TV n’a pas forcément les mêmes besoins qu’un foyer qui utilise plusieurs écrans.',
-        'Stramify Start convient pour démarrer simplement. Stramify Plus répond aux usages les plus demandés avec jusqu’à deux appareils et une qualité selon compatibilité. Stramify Premium privilégie l’accompagnement plus complet, la configuration personnalisée et le support prioritaire.',
+        'Le prix ne doit pas être le seul critère. Pour choisir un abonnement TV en ligne, vérifiez d’abord la durée du pack, la qualité attendue et votre besoin de support. Chaque offre fonctionne avec une utilisation sur 1 appareil à la fois.',
+        'Pack 6 mois convient pour découvrir le service. Pack 12 mois répond aux usages les plus demandés sur l’année. Pack Premium ajoute plus de confort et de contenus, tandis que Pack VIP privilégie l’accompagnement le plus complet.',
       ]],
       ['Pourquoi demander l’essai 24h', [
         'L’essai 24h via WhatsApp est recommandé avant le choix final. Il permet de vérifier votre connexion, votre appareil et le confort d’utilisation. La qualité HD, Full HD ou 4K dépend de votre environnement technique. Cette vérification est plus honnête qu’une promesse générale qui ne tiendrait pas compte de votre installation réelle.',
@@ -1284,18 +1297,18 @@ const seoPages = {
   },
   '/comparatif-offres': {
     h1: 'Comparatif des offres Stramify',
-    title: 'Comparatif offres Stramify | Start Plus Premium',
-    description: 'Comparez les offres Stramify Start, Plus et Premium pour choisir un abonnement TV en ligne adapté à votre usage au Maroc.',
+    title: 'Comparatif offres Stramify | 6 mois 12 mois Premium VIP',
+    description: 'Comparez les offres Stramify 6 mois, 12 mois, Premium et VIP pour choisir un abonnement TV en ligne adapté à votre usage au Maroc.',
     eyebrow: 'Comparatif',
     intro: 'Ce comparatif explique les différences entre les forfaits Stramify sans promesse exagérée.',
     sections: [
-      ['Start, Plus ou Premium', [
-        'Stramify Start est pensé pour les utilisateurs qui veulent une solution simple sur un appareil. Il permet de découvrir le service avec une activation rapide et un support d’installation. C’est un choix lisible pour un usage personnel ou une première configuration.',
-        'Stramify Plus est le plus demandé, car il correspond à de nombreux foyers qui souhaitent plus de souplesse. Il peut convenir lorsque deux appareils sont concernés ou lorsque l’utilisateur souhaite une qualité plus élevée selon compatibilité. Premium s’adresse aux profils qui veulent une configuration plus personnalisée et un accompagnement prioritaire.',
+      ['Pack 6 mois, 12 mois, Premium ou VIP', [
+        'Pack 6 mois est pensé pour les utilisateurs qui veulent découvrir le service sur un appareil. Il permet de tester une formule simple avec activation rapide et support d’installation.',
+        'Pack 12 mois est le meilleur équilibre pour l’année. Pack Premium ajoute plus de confort et de contenus premium, tandis que Pack VIP s’adresse aux profils qui veulent l’expérience la plus complète et un accompagnement personnalisé.',
       ]],
       ['Choisir selon votre usage réel', [
         'Votre connexion Internet, votre appareil et votre manière de regarder influencent beaucoup le résultat. Une Smart TV récente, une connexion stable et une installation propre donnent généralement une meilleure expérience. Le support WhatsApp peut vous aider à comparer avant de payer.',
-        'Le comparatif doit rester pratique : nombre d’appareils, assistance, qualité selon compatibilité et accès 12 mois. Les contenus peuvent varier selon les offres disponibles et les droits de diffusion, ce qui doit être compris avant l’activation.',
+        'Le comparatif doit rester pratique : durée, assistance, qualité selon compatibilité et utilisation sur 1 appareil à la fois. Les contenus peuvent varier selon les offres disponibles et les droits de diffusion, ce qui doit être compris avant l’activation.',
       ]],
     ],
   },
@@ -1318,7 +1331,7 @@ const seoPagesAr = {
         'جودة HD أو Full HD أو 4K تعتمد على سرعة الإنترنت والجهاز والتوافق. لذلك ننصح بتجربة 24 ساعة قبل اختيار الباقة السنوية حتى تتحقق من الاستقرار وسهولة الاستعمال.',
       ]],
       ['اختيار الباقة المناسبة', [
-        'الباقة المناسبة تعتمد على عدد الأجهزة وسرعة الاتصال وحاجتك للدعم. يمكن لمستخدم واحد اختيار Stramify Start، بينما قد تفضل العائلة Stramify Plus أو Stramify Premium. راجع صفحة الأسعار ثم تواصل عبر WhatsApp إذا احتجت نصيحة مباشرة.',
+        'الباقة المناسبة تعتمد على المدة وسرعة الاتصال وحاجتك للدعم والمحتوى. كل باقة تعمل على جهاز واحد في نفس الوقت. راجع صفحة الأسعار ثم تواصل عبر WhatsApp إذا احتجت نصيحة مباشرة.',
       ]],
     ],
   },
@@ -1338,7 +1351,7 @@ const seoPagesAr = {
         'على Smart TV الحديثة يمكن أن تكون الخطوات سريعة. على Android TV أو Firestick قد تحتاج إلى بعض الإعدادات. أما على الهاتف أو الكمبيوتر فيوجهك الدعم حسب مستوى راحتك مع الخطوات التقنية.',
       ]],
       ['قارن قبل الاختيار', [
-        'قبل اختيار الباقة، تحقق من عدد الأجهزة والجودة المطلوبة وحاجتك للمساعدة. صفحة الأسعار تشرح Stramify Start وStramify Plus وStramify Premium، وصفحة التثبيت تشرح الأجهزة الرئيسية، أما صفحة الأسئلة الشائعة فتجيب عن الأسئلة المتكررة.',
+        'قبل اختيار الباقة، تحقق من المدة والجودة المطلوبة وحاجتك للمساعدة. صفحة الأسعار تشرح باقات 6 أشهر، 12 شهر، Premium وVIP، وصفحة التثبيت تشرح الأجهزة الرئيسية، أما صفحة الأسئلة الشائعة فتجيب عن الأسئلة المتكررة.',
       ]],
     ],
   },
@@ -1358,7 +1371,7 @@ const seoPagesAr = {
         'يمكن لدعم Stramify مساعدتك في مراجعة التطبيق والإعدادات وسلوك الجهاز. الهدف هو تجربة مريحة وواقعية، وليس تقديم وعود لا تراعي ظروف اتصالك.',
       ]],
       ['اختيار الباقة حسب الجودة', [
-        'إذا كانت جودة الصورة أولوية لديك، قارن بين Stramify Plus وStramify Premium. القرار يعتمد أيضاً على عدد الأجهزة وحاجتك إلى إعداد مخصص. صفحة الأسعار والتثبيت تساعدك على الاختيار.',
+        'إذا كانت جودة الصورة أولوية لديك، قارن بين باقة 12 شهر وPremium وVIP. القرار يعتمد أيضاً على المدة وحاجتك إلى إعداد مخصص. كل باقة تعمل على جهاز واحد في نفس الوقت. صفحة الأسعار والتثبيت تساعدك على الاختيار.',
       ]],
     ],
   },
@@ -1378,7 +1391,7 @@ const seoPagesAr = {
         'يقدم Stramify إرشادات هادئة وواضحة بدون وعود مبالغ فيها. كما نوضح أن المحتويات قد تختلف حسب العرض والمورد والبلد والحقوق، حتى تختار وأنت تعرف ما الذي تختبره.',
       ]],
       ['مقارنة العروض من طنجة', [
-        'للاستعمال على جهاز واحد قد تكفي باقة Stramify Start. إذا كان البيت يحتاج مرونة أكثر، يمكن أن تكون Plus أو Premium أنسب. راجع الأسعار ودليل التثبيت والأسئلة الشائعة قبل التواصل عبر WhatsApp.',
+        'للتجربة الأولى قد تكفي باقة 6 أشهر. إذا كنت تريد سنة كاملة أو محتوى أكثر، يمكن أن تكون باقة 12 شهر أو Premium أو VIP أنسب. كل باقة تعمل على جهاز واحد في نفس الوقت. راجع الأسعار ودليل التثبيت والأسئلة الشائعة قبل التواصل عبر WhatsApp.',
       ]],
     ],
   },
@@ -1398,7 +1411,7 @@ const seoPagesAr = {
         'يحافظ Stramify على خطاب واضح ومسؤول. قد تختلف المحتويات والقنوات حسب العروض والموردين والحقوق. دورنا هو المساعدة في الإعداد والتوافق واختيار الباقة الأنسب.',
       ]],
       ['اختيار الباقة في الدار البيضاء', [
-        'للاستعمال الفردي قد تكون Start مناسبة. لعائلة أو منزل يستعمل جهازين أحياناً، قد تكون Plus أكثر راحة. Premium موجه لمن يريد مرافقة أكثر تخصيصاً. صفحات الأسعار والتثبيت والأسئلة الشائعة توضح التفاصيل.',
+        'للاستعمال الفردي قد تكون باقة 6 أشهر مناسبة للتجربة. باقة 12 شهر مناسبة لسنة كاملة، بينما توفر Premium وVIP تجربة أوسع ودعماً أقوى. كل الباقات تعمل على جهاز واحد في نفس الوقت. صفحات الأسعار والتثبيت والأسئلة الشائعة توضح التفاصيل.',
       ]],
     ],
   },
@@ -1418,7 +1431,7 @@ const seoPagesAr = {
         'نبقى واضحين بخصوص المحتوى. القنوات والكتالوجات قد تختلف حسب المورد والبلد وحقوق البث. Stramify يقدم مرافقة منظمة وليس وعوداً مبالغاً فيها.',
       ]],
       ['عرض واضح للمستخدمين في الرباط', [
-        'تعرض صفحة الأسعار ثلاث باقات سنوية: Stramify Start وStramify Plus وStramify Premium. الاختيار يعتمد على عدد الأجهزة والجودة المطلوبة وحاجتك للدعم. WhatsApp هو الطريق الأسرع للاستشارة.',
+        'تعرض صفحة الأسعار أربع باقات: 6 أشهر، 12 شهر، Premium وVIP. الاختيار يعتمد على المدة والجودة المطلوبة وحاجتك للدعم. كل باقة تعمل على جهاز واحد في نفس الوقت. WhatsApp هو الطريق الأسرع للاستشارة.',
       ]],
     ],
   },
@@ -1438,20 +1451,20 @@ const seoPagesAr = {
         'المحتويات المتاحة تعتمد على المورد والبلد والباقة والحقوق. لهذا يقدم Stramify شرحاً واضحاً يساعدك على اختيار العرض المناسب دون مبالغة.',
       ]],
       ['باقات حسب الحاجة', [
-        'للاستعمال الخفيف في شقة أو رياض قد تكفي Start. للعائلة أو الاستعمال المنتظم يمكن أن تكون Plus أو Premium أكثر راحة. صفحة الأسعار والأسئلة الشائعة تساعدانك قبل التواصل.',
+        'للاستعمال الخفيف في شقة أو رياض قد تكفي باقة 6 أشهر. للاستعمال المنتظم يمكن أن تكون باقة 12 شهر أو Premium أو VIP أكثر راحة. كل باقة تعمل على جهاز واحد في نفس الوقت. صفحة الأسعار والأسئلة الشائعة تساعدانك قبل التواصل.',
       ]],
     ],
   },
   '/tarifs': {
     h1: 'أسعار Stramify',
     title: 'أسعار Stramify | اشتراك TV المغرب',
-    description: 'قارن بين Stramify Start وPlus وPremium. باقات سنوية، تجربة 24 ساعة عبر WhatsApp، تفعيل سريع ومساعدة في التثبيت.',
+    description: 'قارن بين باقات Stramify: 6 أشهر، 12 شهر، Premium وVIP. تجربة 24 ساعة عبر WhatsApp، تفعيل سريع ومساعدة في التثبيت.',
     eyebrow: 'الأسعار',
-    intro: 'قارن بين باقات Stramify حسب عدد الأجهزة، سرعة الاتصال واحتياجاتك في الاستعمال والدعم.',
+    intro: 'قارن بين باقات Stramify حسب المدة، سرعة الاتصال واحتياجاتك في الاستعمال والدعم.',
     sections: [
       ['كيف تقارن بين العروض', [
-        'لا يجب أن يكون السعر هو المعيار الوحيد. قبل اختيار اشتراك مشاهدة عبر الإنترنت، راجع عدد الأجهزة والجودة المطلوبة وحاجتك للدعم. مستخدم يريد جهازاً واحداً لا يملك نفس احتياجات عائلة تستعمل أكثر من شاشة.',
-        'Stramify Start مناسب للبداية. Stramify Plus هو الأكثر طلباً لأنه يوفر مرونة أكبر حسب التوافق. Stramify Premium يركز على تجربة أكثر اكتمالاً وإعداد مخصص ودعم أولوية.',
+        'لا يجب أن يكون السعر هو المعيار الوحيد. قبل اختيار اشتراك مشاهدة عبر الإنترنت، راجع مدة الباقة والجودة المطلوبة وحاجتك للدعم. كل عرض يعمل على جهاز واحد في نفس الوقت.',
+        'باقة 6 أشهر مناسبة للبداية. باقة 12 شهر هي الأكثر توازناً لسنة كاملة. Premium وVIP يركزان على تجربة أكثر اكتمالاً وإعداد مخصص ودعم أولوية.',
       ]],
       ['لماذا تطلب تجربة 24 ساعة', [
         'تجربة 24 ساعة عبر WhatsApp تساعد على اختبار الاتصال والجهاز وسهولة الاستعمال قبل الاختيار النهائي. جودة HD أو Full HD أو 4K تعتمد على الظروف التقنية لديك.',
@@ -1461,18 +1474,18 @@ const seoPagesAr = {
   },
   '/comparatif-offres': {
     h1: 'مقارنة عروض Stramify',
-    title: 'مقارنة عروض Stramify | Start Plus Premium',
-    description: 'قارن بين عروض Stramify Start وPlus وPremium لاختيار اشتراك مشاهدة مناسب لاستعمالك في المغرب.',
+    title: 'مقارنة عروض Stramify | 6 أشهر 12 شهر Premium VIP',
+    description: 'قارن بين عروض Stramify: 6 أشهر، 12 شهر، Premium وVIP لاختيار اشتراك مشاهدة مناسب لاستعمالك في المغرب.',
     eyebrow: 'مقارنة',
     intro: 'هذه الصفحة تشرح الفرق بين باقات Stramify بطريقة عملية وواضحة.',
     sections: [
-      ['Start أو Plus أو Premium', [
-        'Stramify Start مناسب لمن يريد حلاً بسيطاً على جهاز واحد مع تفعيل سريع ودعم في التثبيت. إنه اختيار واضح للاستعمال الشخصي أو أول تجربة.',
-        'Stramify Plus هو الأكثر طلباً لأنه يناسب كثيراً من الأسر التي تريد مرونة أكبر حتى جهازين وجودة حسب التوافق. أما Stramify Premium فهو للمستخدم الذي يريد مرافقة مخصصة ودعماً أولوياً.',
+      ['باقة 6 أشهر أو 12 شهر أو Premium أو VIP', [
+        'باقة 6 أشهر مناسبة لمن يريد تجربة الخدمة على جهاز واحد مع تفعيل سريع ودعم في التثبيت. إنها اختيار واضح للاستعمال الشخصي أو أول تجربة.',
+        'باقة 12 شهر هي الأكثر طلباً لأنها مناسبة لسنة كاملة مع جودة حسب التوافق. أما Premium وVIP فهما للمستخدم الذي يريد محتوى أكثر ومرافقة أقوى. كل عرض يعمل على جهاز واحد في نفس الوقت.',
       ]],
       ['اختر حسب استعمالك الحقيقي', [
         'سرعة الإنترنت ونوع الجهاز وطريقة المشاهدة تؤثر كثيراً على النتيجة. Smart TV حديثة واتصال مستقر وإعداد صحيح تعطي غالباً تجربة أفضل. لذلك يساعدك الدعم عبر WhatsApp على المقارنة قبل الدفع.',
-        'المقارنة العملية تعتمد على عدد الأجهزة، المساعدة، الجودة حسب التوافق ومدة الوصول 12 شهراً. قد تختلف المحتويات حسب العروض والحقوق المتاحة، ويجب فهم ذلك قبل التفعيل.',
+        'المقارنة العملية تعتمد على المدة، المساعدة، الجودة حسب التوافق والاستخدام على جهاز واحد في نفس الوقت. قد تختلف المحتويات حسب العروض والحقوق المتاحة، ويجب فهم ذلك قبل التفعيل.',
       ]],
     ],
   },
