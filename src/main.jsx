@@ -38,6 +38,7 @@ const routeHrefs = {
   installation: '/installation',
   faq: '/faq',
   contact: '/contact',
+  comparatif: '/comparatif-offres',
   abonnement: '/abonnement-tv-maroc',
   iptvMaroc: '/iptv-maroc',
   iptvTanger: '/iptv-tanger',
@@ -65,11 +66,11 @@ const translations = {
       open: 'Ouvrir le menu',
       close: 'Fermer le menu',
     },
-    seoTitle: 'Stramify | Abonnement TV Maroc 4K – Essai 24h',
-    seoDescription: 'Découvrez Stramify, une solution TV en ligne au Maroc compatible Smart TV, Android TV, Firestick, mobile et PC. Essai 24h via WhatsApp, activation rapide et support 24/7.',
-    heroBadge: 'Solution TV en ligne au Maroc',
-    heroTitle: 'Abonnement TV en ligne au Maroc en HD & 4K',
-    heroSubtitle: 'Profitez d’une expérience TV simple, stable et compatible avec Smart TV, Android TV, Firestick, mobile et PC. Essai 24h gratuit via WhatsApp.',
+    seoTitle: 'Abonnement IPTV Maroc avec support WhatsApp | Stramify',
+    seoDescription: 'Découvrez Stramify, un service d’abonnement IPTV au Maroc avec chaînes, films, séries, qualité HD/4K selon disponibilité et assistance WhatsApp.',
+    heroBadge: 'Abonnement IPTV Maroc',
+    heroTitle: 'Abonnement IPTV Maroc avec support WhatsApp',
+    heroSubtitle: 'Cet abonnement IPTV Maroc vous permet de profiter d’une expérience TV simple, stable et compatible avec Smart TV, Android TV, Firestick, mobile et PC. Qualité HD/4K selon disponibilité, essai 24h gratuit via WhatsApp et utilisation sur 1 appareil à la fois.',
     heroPrimary: 'Essai 24h gratuit',
     heroSecondary: 'Voir les forfaits',
     heroPromoTitle: 'Activation rapide',
@@ -142,6 +143,14 @@ const translations = {
       { label: 'Installation', href: routeHrefs.installation },
       { label: 'FAQ', href: routeHrefs.faq },
       { label: 'Contact', href: routeHrefs.contact },
+    ],
+    homeLinksTitle: 'Explorer Stramify',
+    homeLinks: [
+      { label: 'Découvrir IPTV Maroc', href: routeHrefs.iptvMaroc },
+      { label: 'Voir les tarifs IPTV', href: routeHrefs.pricing },
+      { label: 'Besoin d’aide pour l’installation ?', href: routeHrefs.installation },
+      { label: 'Lire les questions fréquentes', href: routeHrefs.faq },
+      { label: 'Contacter Stramify sur WhatsApp', href: routeHrefs.contact },
     ],
     contactWhatsApp: 'Contacter WhatsApp',
     whatsappMessage: DEFAULT_WHATSAPP_MESSAGE,
@@ -239,8 +248,120 @@ const translations = {
       { label: 'الأسئلة', href: routeHrefs.faq },
       { label: 'اتصل بنا', href: routeHrefs.contact },
     ],
+    homeLinksTitle: 'استكشف Stramify',
+    homeLinks: [
+      { label: 'تعرف على IPTV المغرب', href: routeHrefs.iptvMaroc },
+      { label: 'عرض أسعار IPTV', href: routeHrefs.pricing },
+      { label: 'تحتاج مساعدة في التثبيت؟', href: routeHrefs.installation },
+      { label: 'قراءة الأسئلة الشائعة', href: routeHrefs.faq },
+      { label: 'تواصل مع Stramify عبر WhatsApp', href: routeHrefs.contact },
+    ],
     contactWhatsApp: 'تواصل عبر WhatsApp',
     whatsappMessage: 'مرحبا Stramify، أريد الاستفادة من تجربة 24 ساعة المجانية.',
+  },
+  en: {
+    dir: 'ltr',
+    locale: 'en',
+    ogLocale: 'en_US',
+    nav: {
+      home: 'Home',
+      pricing: 'Pricing',
+      installation: 'Installation',
+      faq: 'FAQ',
+      cities: 'Cities',
+      contact: 'Contact',
+      cta: 'Free 24h trial',
+      open: 'Open menu',
+      close: 'Close menu',
+    },
+    seoTitle: 'Morocco IPTV Subscription with WhatsApp Support | Stramify',
+    seoDescription: 'Discover Stramify, an IPTV subscription service in Morocco with channels, movies, series, HD/4K quality depending on availability, and WhatsApp assistance.',
+    heroBadge: 'IPTV service in Morocco',
+    heroTitle: 'Morocco IPTV subscription with WhatsApp support',
+    heroSubtitle: 'Enjoy a simple, stable TV experience compatible with Smart TV, Android TV, Firestick, mobile and PC. Free 24h trial via WhatsApp.',
+    heroPrimary: 'Free 24h trial',
+    heroSecondary: 'View pricing',
+    heroPromoTitle: 'Fast activation',
+    heroPromoText: 'WhatsApp support to help you get started',
+    visualAlt: 'Stramify IPTV subscription in Morocco compatible with Smart TV',
+    visualLabels: ['Smart TV', 'Replay', 'Support'],
+    countdown: ['hours', 'minutes', 'seconds'],
+    badges: ['24h trial', 'Fast activation', 'WhatsApp support', 'Smart TV compatible'],
+    featuresTitle: 'A practical IPTV service for viewers in Morocco',
+    features: [
+      ['Content depending on availability', 'Access TV and entertainment content depending on your pack, country and available broadcasting rights.'],
+      ['HD / Full HD / 4K quality', 'Quality depends on your internet connection, device and the compatibility of the selected service.'],
+      ['Installation assistance', 'Our support helps you set up Smart TV, Android TV, Firestick, mobile or PC.'],
+      ['Fast activation', 'After WhatsApp confirmation, activation is handled quickly with clear instructions.'],
+      ['Stable experience', 'Stramify focuses on a professional, simple and realistic service for everyday use.'],
+    ],
+    devicesTitle: 'Compatible with everyday devices',
+    devices: ['Smart TV', 'Android TV / Box', 'Firestick', 'iPhone & iPad', 'Android Mobile', 'Windows & Mac'],
+    pricingTitle: 'Stramify packs',
+    pricingSubtitle: 'Simple packs to choose by duration, connection quality and support needs.',
+    pricingNote: 'Each pack is used on 1 device at a time. Choose based on duration, internet connection and content needs.',
+    popular: 'Most requested',
+    planCta: 'Request this pack',
+    promoTitle: '24h trial via WhatsApp',
+    promoText: 'Check compatibility and quality before choosing your pack.',
+    promoCta: 'Request trial',
+    whyTitle: 'Why choose Stramify?',
+    reasons: [
+      ['WhatsApp support', 'A support team available for trial, activation, pack selection and installation.'],
+      ['Guided setup', 'Simple steps based on your device, without confusing technical language.'],
+      ['Clear pricing', 'Readable pack prices explained before activation.'],
+      ['Responsible use', 'Content and channels may vary by provider, country and broadcasting rights.'],
+      ['Fast assistance', 'Get clear answers before starting.'],
+      ['Wide compatibility', 'Smart TV, Android TV, Firestick, mobile and PC depending on configuration.'],
+    ],
+    trialTitle: 'Ready to test Stramify?',
+    trialText: 'Request your free 24h trial via WhatsApp and check compatibility with your device.',
+    trialCta: 'Free 24h trial',
+    faqTitle: 'Frequently asked questions',
+    footerDescription: 'Stramify is an IPTV service in Morocco with a 24h WhatsApp trial, fast activation and installation assistance.',
+    legalNotice: 'Stramify provides setup assistance and access to TV services depending on available offers. Content and channels may vary by provider, country and broadcasting rights.',
+    copyright: 'All rights reserved.',
+    faqAllCta: 'View all questions',
+    footerQuick: 'Quick links',
+    footerInfo: 'Information',
+    cityLinks: [
+      { label: 'Tangier', href: routeHrefs.iptvTanger },
+      { label: 'Casablanca', href: routeHrefs.iptvCasablanca },
+      { label: 'Rabat', href: routeHrefs.iptvRabat },
+      { label: 'Marrakech', href: routeHrefs.iptvMarrakech },
+    ],
+    footerLinks: [
+      { label: 'Home', href: routeHrefs.home },
+      { label: 'Pricing', href: routeHrefs.pricing },
+      { label: 'Installation', href: routeHrefs.installation },
+      { label: 'FAQ', href: routeHrefs.faq },
+      { label: 'Contact', href: routeHrefs.contact },
+      { label: 'TV subscription Morocco', href: routeHrefs.abonnement },
+      { label: 'IPTV Morocco', href: routeHrefs.iptvMaroc },
+      { label: 'IPTV Tangier', href: routeHrefs.iptvTanger },
+      { label: 'IPTV Casablanca', href: routeHrefs.iptvCasablanca },
+      { label: 'IPTV Rabat', href: routeHrefs.iptvRabat },
+      { label: 'IPTV Marrakech', href: routeHrefs.iptvMarrakech },
+      { label: 'Privacy policy', href: routeHrefs.privacy },
+      { label: 'Terms of use', href: routeHrefs.terms },
+      { label: 'Refund policy', href: routeHrefs.refund },
+    ],
+    internalLinks: [
+      { label: 'Pricing', href: routeHrefs.pricing },
+      { label: 'Installation help', href: routeHrefs.installation },
+      { label: 'FAQ', href: routeHrefs.faq },
+      { label: 'Contact', href: routeHrefs.contact },
+    ],
+    homeLinksTitle: 'Explore Stramify',
+    homeLinks: [
+      { label: 'Discover IPTV Morocco', href: routeHrefs.iptvMaroc },
+      { label: 'View IPTV pricing', href: routeHrefs.pricing },
+      { label: 'Need installation help?', href: routeHrefs.installation },
+      { label: 'Read frequent questions', href: routeHrefs.faq },
+      { label: 'Contact Stramify on WhatsApp', href: routeHrefs.contact },
+    ],
+    contactWhatsApp: 'Contact on WhatsApp',
+    whatsappMessage: 'Hello Stramify, I would like to request the free 24h trial.',
   },
 };
 
@@ -307,6 +428,37 @@ const pricingPlans = {
       features: ['الوصول إلى أكبر تشكيلة من المحتوى', 'مكتبة VOD كاملة', 'جودة 4K حسب التوفر', 'Replay وتحديثات بأولوية', 'الاستخدام على جهاز واحد في نفس الوقت', 'مرافقة VIP شخصية'],
     },
   ],
+  en: [
+    {
+      name: '6-month pack',
+      price: '199 DH',
+      period: '',
+      tag: 'Essential pack to discover the service',
+      features: ['20,000+ live channels', 'Movies and series on demand', 'HD & Full HD quality', 'Use on 1 device at a time', 'Installation assistance included'],
+    },
+    {
+      name: '12-month pack',
+      price: '299 DH',
+      period: '',
+      tag: 'Best balance for the full year',
+      highlighted: true,
+      features: ['20,000+ live channels', 'Movies and series on demand', 'HD, Full HD & 4K depending on availability', 'Use on 1 device at a time', 'Priority WhatsApp support'],
+    },
+    {
+      name: 'Premium pack',
+      price: '399 DH',
+      period: '',
+      tag: 'More comfort and premium content',
+      features: ['Extended channel selection', 'Enhanced premium VOD catalog', 'Up to 4K Ultra HD depending on availability', 'Replay available on a selection', 'Use on 1 device at a time', 'Priority Premium support'],
+    },
+    {
+      name: 'VIP pack',
+      price: '499 DH',
+      period: '',
+      tag: 'Our most complete experience',
+      features: ['Access to the most complete selection', 'Complete VOD library', '4K quality depending on availability', 'Priority replay and updates', 'Use on 1 device at a time', 'Personalized VIP assistance'],
+    },
+  ],
 };
 
 const faqItems = {
@@ -334,11 +486,23 @@ const faqItems = {
     ['هل القنوات والمحتوى ثابتة دائماً؟', 'لا. قد تختلف القنوات والمحتويات حسب المورد والبلد وحقوق البث والتوفر التقني.'],
     ['كيف أتواصل مع الدعم؟', `يمكنك التواصل مع Stramify عبر WhatsApp على الرقم ${WHATSAPP_DISPLAY_NUMBER} بخصوص التجربة، التفعيل، الأسعار والتثبيت.`],
   ],
+  en: [
+    ['How can I get the free 24h trial?', 'Click a WhatsApp button, send the prepared message and our support team will reply with trial steps for your device.'],
+    ['How is my subscription activated?', 'After you choose a pack and confirm, Stramify prepares access and sends activation instructions via WhatsApp.'],
+    ['Which devices are compatible?', 'The service can be configured on Smart TV, Android TV, Firestick, Android phone, iPhone, iPad and PC depending on setup.'],
+    ['What internet speed is recommended?', 'A stable connection is recommended. HD, Full HD or 4K quality depends on your speed, device and availability.'],
+    ['How does device use work?', 'Each Stramify pack is used on 1 device at a time. Support helps you configure the selected device correctly.'],
+    ['How does payment work?', 'Support confirms the pack, steps and available options before activation. Pricing is presented clearly.'],
+    ['How long does installation take?', 'Installation is usually quick when the device is ready and connected to the internet. Support guides you step by step.'],
+    ['What should I do if the service does not work?', 'Contact WhatsApp support. We check connection, application, device and configuration to help you.'],
+    ['Are channels and content always the same?', 'No. Content and channels may vary by provider, country, broadcasting rights and technical availability.'],
+    ['How can I contact support?', `You can contact Stramify on WhatsApp at ${WHATSAPP_DISPLAY_NUMBER} for trial, activation, pricing and installation.`],
+  ],
 };
 
 const installationContent = {
   fr: {
-    title: 'Guide d’installation Stramify',
+    title: 'Installation IPTV Smart TV Maroc',
     subtitle: 'Ce guide vous aide à préparer votre appareil avant l’activation. Les étapes peuvent varier selon le modèle, l’application compatible et votre connexion Internet.',
     sections: [
       ['Installation sur Smart TV', 'Ouvrez le store ou l’espace applications de votre Smart TV, installez une application compatible recommandée par le support, puis saisissez les informations reçues après activation. Si vous hésitez, envoyez une photo du modèle de votre TV sur WhatsApp.'],
@@ -361,11 +525,23 @@ const installationContent = {
       ['التثبيت على الكمبيوتر', 'على الكمبيوتر يمكنك استعمال حل متوافق أو قارئ مناسب. يشرح لك الدعم طريقة الإعداد حسب Windows أو Mac وحسب مستوى راحتك مع الخطوات التقنية.'],
     ],
   },
+  en: {
+    title: 'IPTV Smart TV installation in Morocco',
+    subtitle: 'This guide helps you prepare your device before activation. Steps may vary depending on the device, compatible app and connection quality.',
+    sections: [
+      ['Installation on Smart TV', 'Open the app area on your Smart TV, install a compatible app recommended by support, then enter the access details received after activation. If unsure, send your TV model on WhatsApp.'],
+      ['Installation on Android TV', 'Make sure your Android TV box is connected to the internet, install a compatible TV player app, then follow the access details provided by Stramify. Support can guide you step by step.'],
+      ['Installation on Firestick', 'Connect your Firestick to Wi-Fi, prepare the app area and contact support for the method adapted to your device. We keep setup simple and clear.'],
+      ['Installation on Android phone', 'Install a compatible app from an official source when possible, open it, then enter the access details provided. A stable connection is recommended.'],
+      ['Installation on iPhone / iPad', 'On iOS, use a compatible app available in the App Store when possible. Stramify support explains which fields to fill and how to connect properly.'],
+      ['Installation on PC', 'On a computer, you can use a compatible solution or player. Support explains setup for Windows or Mac according to your comfort level.'],
+    ],
+  },
 };
 
 const contactContent = {
   fr: {
-    title: 'Contact Stramify',
+    title: 'Contacter service IPTV Maroc',
     text: 'Notre support vous répond sur WhatsApp pour l’essai 24h, l’activation, le choix du forfait et l’installation.',
     cards: [
       ['Essai 24h', 'Demandez un test avant de choisir un forfait.'],
@@ -380,6 +556,15 @@ const contactContent = {
       ['تجربة 24 ساعة', 'اطلب تجربة قبل اختيار الباقة المناسبة.'],
       ['التفعيل', 'توصل بالخطوات المناسبة لجهازك.'],
       ['التثبيت', 'احصل على مساعدة واضحة عبر WhatsApp.'],
+    ],
+  },
+  en: {
+    title: 'Contact IPTV service Morocco',
+    text: 'Our support team answers on WhatsApp to help with the 24h trial, pack selection, activation and installation.',
+    cards: [
+      ['24h trial', 'Request a test before choosing your pack.'],
+      ['Activation', 'Receive steps adapted to your device.'],
+      ['Installation', 'Get clear help on WhatsApp.'],
     ],
   },
 };
@@ -414,6 +599,88 @@ function Link({ href, children, className, onClick }) {
       {children}
     </a>
   );
+}
+
+function getContextualLinks(path, lang) {
+  const labels = {
+    fr: {
+      pricing: 'Voir les tarifs IPTV',
+      packs: 'Découvrir nos packs',
+      installation: 'Besoin d’aide pour l’installation ?',
+      faq: 'Lire les questions fréquentes',
+      contact: 'Contacter Stramify sur WhatsApp',
+      compare: 'Comparer les offres',
+      iptv: 'Découvrir IPTV Maroc',
+    },
+    ar: {
+      pricing: 'عرض أسعار IPTV',
+      packs: 'اكتشاف الباقات',
+      installation: 'تحتاج مساعدة في التثبيت؟',
+      faq: 'قراءة الأسئلة الشائعة',
+      contact: 'تواصل مع Stramify عبر WhatsApp',
+      compare: 'مقارنة العروض',
+      iptv: 'تعرف على IPTV المغرب',
+    },
+    en: {
+      pricing: 'View IPTV pricing',
+      packs: 'Discover our packs',
+      installation: 'Need installation help?',
+      faq: 'Read frequent questions',
+      contact: 'Contact Stramify on WhatsApp',
+      compare: 'Compare offers',
+      iptv: 'Discover IPTV Morocco',
+    },
+  }[lang] || {};
+
+  const map = {
+    '/': [
+      { label: labels.iptv, href: routeHrefs.iptvMaroc },
+      { label: labels.pricing, href: routeHrefs.pricing },
+      { label: labels.installation, href: routeHrefs.installation },
+      { label: labels.faq, href: routeHrefs.faq },
+      { label: labels.contact, href: routeHrefs.contact },
+    ],
+    '/iptv-maroc': [
+      { label: labels.pricing, href: routeHrefs.pricing },
+      { label: labels.installation, href: routeHrefs.installation },
+      { label: labels.faq, href: routeHrefs.faq },
+      { label: labels.contact, href: routeHrefs.contact },
+    ],
+    '/abonnement-tv-maroc': [
+      { label: labels.pricing, href: routeHrefs.pricing },
+      { label: labels.compare, href: routeHrefs.comparatif },
+      { label: labels.contact, href: routeHrefs.contact },
+    ],
+    '/tarifs': [
+      { label: labels.compare, href: routeHrefs.comparatif },
+      { label: labels.installation, href: routeHrefs.installation },
+      { label: labels.contact, href: routeHrefs.contact },
+    ],
+    '/installation': [
+      { label: labels.faq, href: routeHrefs.faq },
+      { label: labels.contact, href: routeHrefs.contact },
+      { label: labels.iptv, href: routeHrefs.iptvMaroc },
+    ],
+    '/faq': [
+      { label: labels.pricing, href: routeHrefs.pricing },
+      { label: labels.installation, href: routeHrefs.installation },
+      { label: labels.contact, href: routeHrefs.contact },
+    ],
+  };
+
+  if (['/iptv-tanger', '/iptv-casablanca', '/iptv-rabat', '/iptv-marrakech'].includes(path)) {
+    return [
+      { label: labels.pricing, href: routeHrefs.pricing },
+      { label: labels.contact, href: routeHrefs.contact },
+    ];
+  }
+
+  return map[path] || [
+    { label: labels.pricing, href: routeHrefs.pricing },
+    { label: labels.installation, href: routeHrefs.installation },
+    { label: labels.faq, href: routeHrefs.faq },
+    { label: labels.contact, href: routeHrefs.contact },
+  ];
 }
 
 function useCountdown(initialSeconds = 4 * 60 * 60) {
@@ -473,6 +740,23 @@ function setLinkTag(rel, href) {
   tag.setAttribute('href', href);
 }
 
+function setAlternateLinks(path) {
+  document.head.querySelectorAll('link[rel="alternate"]').forEach((tag) => tag.remove());
+  [
+    ['fr-MA', pageUrl(path)],
+    ['ar-MA', pageUrl(path)],
+    ['en', pageUrl(path)],
+    ['x-default', pageUrl(path)],
+  ].forEach(([hreflang, href]) => {
+    const tag = document.createElement('link');
+    tag.setAttribute('rel', 'alternate');
+    tag.setAttribute('hreflang', hreflang);
+    tag.setAttribute('href', href);
+    tag.setAttribute('data-stramify-alternate', 'true');
+    document.head.appendChild(tag);
+  });
+}
+
 function pageUrl(path) {
   return `${SITE_URL}${path === '/' ? '/' : path}`;
 }
@@ -492,6 +776,7 @@ function updateSeo({ title, description, path, ogLocale, faqs = [], breadcrumbs 
   setMetaTag('name', 'twitter:title', title);
   setMetaTag('name', 'twitter:description', description);
   setLinkTag('canonical', url);
+  setAlternateLinks(path);
 
   const graph = [
     {
@@ -555,6 +840,19 @@ function updateSeo({ title, description, path, ogLocale, faqs = [], breadcrumbs 
     });
   }
 
+  if (!['/faq', '/politique-de-confidentialite', '/conditions-utilisation', '/politique-remboursement'].includes(path)) {
+    graph.push({
+      '@type': 'Service',
+      '@id': `${url}#service`,
+      name: title,
+      description,
+      provider: { '@id': `${SITE_URL}/#organization` },
+      areaServed: 'Morocco',
+      serviceType: 'IPTV subscription and TV setup assistance',
+      url,
+    });
+  }
+
   let script = document.getElementById('stramify-jsonld');
   if (!script) {
     script = document.createElement('script');
@@ -568,7 +866,7 @@ function updateSeo({ title, description, path, ogLocale, faqs = [], breadcrumbs 
 function LanguageSwitch({ lang, setLang }) {
   return (
     <div className="inline-flex rounded-2xl border border-slate-200 bg-white p-1 shadow-sm" aria-label="Language switcher">
-      {['fr', 'ar'].map((code) => (
+      {['fr', 'ar', 'en'].map((code) => (
         <button
           key={code}
           type="button"
@@ -753,6 +1051,7 @@ function HomePage({ lang, t }) {
           <HeroVisual t={t} />
         </div>
       </section>
+      <InternalLinks t={t} links={getContextualLinks('/', lang)} />
       <FeatureSection lang={lang} t={t} />
       <DevicesSection lang={lang} t={t} />
       <PricingSection lang={lang} t={t} />
@@ -931,7 +1230,7 @@ function FaqList({ items, dir }) {
   );
 }
 
-function SeoPage({ page, lang, t }) {
+function SeoPage({ page, lang, t, path }) {
   return (
     <>
       <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
@@ -957,16 +1256,17 @@ function SeoPage({ page, lang, t }) {
           ))}
         </article>
       </section>
-      <InternalLinks t={t} />
+      <InternalLinks t={t} links={getContextualLinks(path, lang)} />
     </>
   );
 }
 
-function InternalLinks({ t }) {
+function InternalLinks({ t, links }) {
+  const items = links || t.internalLinks;
   return (
     <section className="bg-white px-4 py-10 sm:px-6 lg:px-8">
       <div className="mx-auto flex max-w-4xl flex-wrap gap-3" dir={t.dir}>
-        {t.internalLinks.map(({ label, href }) => (
+        {items.map(({ label, href }) => (
           <Link key={href} href={href} className="btn btn-outline">{label}</Link>
         ))}
       </div>
@@ -996,7 +1296,7 @@ function InstallationPage({ lang, t }) {
         </div>
       </section>
       <TrialSection t={t} />
-      <InternalLinks t={t} />
+      <InternalLinks t={t} links={getContextualLinks('/installation', lang)} />
     </>
   );
 }
@@ -1024,7 +1324,7 @@ function ContactPage({ lang, t }) {
           ))}
         </div>
       </section>
-      <InternalLinks t={t} />
+      <InternalLinks t={t} links={getContextualLinks('/contact', lang)} />
     </>
   );
 }
@@ -1052,28 +1352,40 @@ function TarifsPage({ lang, t, page }) {
           ))}
         </article>
       </section>
-      <InternalLinks t={t} />
+      <InternalLinks t={t} links={getContextualLinks('/tarifs', lang)} />
     </>
   );
 }
 
 function FaqPage({ lang, t }) {
+  const faqPageText = {
+    fr: {
+      h1: 'FAQ IPTV Maroc',
+      intro: 'Retrouvez les réponses aux questions fréquentes sur l’abonnement IPTV Stramify, les tarifs, l’installation, les appareils compatibles, la connexion Internet et le support.',
+    },
+    ar: {
+      h1: 'الأسئلة الشائعة حول Stramify',
+      intro: 'إجابات واضحة حول تجربة 24 ساعة، التفعيل، الأجهزة المتوافقة، سرعة الإنترنت، الدفع والدعم عبر WhatsApp.',
+    },
+    en: {
+      h1: 'IPTV Morocco FAQ',
+      intro: 'Find clear answers about Stramify IPTV subscription, pricing, installation, compatible devices, internet connection and WhatsApp support.',
+    },
+  }[lang];
+
   return (
     <>
       <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
         <div className={`mx-auto max-w-4xl ${lang === 'ar' ? 'text-right' : 'text-left'}`} dir={t.dir}>
-          <h1 className="text-4xl font-black text-navy sm:text-5xl">{lang === 'ar' ? 'الأسئلة الشائعة حول Stramify' : 'FAQ Stramify'}</h1>
-          <p className="mt-6 text-lg leading-8 text-muted">
-            {lang === 'ar'
-              ? 'إجابات واضحة حول تجربة 24 ساعة، التفعيل، الأجهزة المتوافقة، سرعة الإنترنت، الدفع والدعم عبر WhatsApp.'
-              : 'Retrouvez les réponses aux questions fréquentes sur l’essai 24h, l’activation, les appareils compatibles, la connexion Internet et le support.'}
-          </p>
+          <h1 className="text-4xl font-black text-navy sm:text-5xl">{faqPageText.h1}</h1>
+          <p className="mt-6 text-lg leading-8 text-muted">{faqPageText.intro}</p>
         </div>
       </section>
       <section className="section bg-soft">
         <FaqList items={faqItems[lang]} dir={t.dir} />
       </section>
       <TrialSection t={t} />
+      <InternalLinks t={t} links={getContextualLinks('/faq', lang)} />
     </>
   );
 }
@@ -1139,9 +1451,9 @@ function FloatingWhatsApp({ t }) {
 
 const seoPages = {
   '/abonnement-tv-maroc': {
-    h1: 'Abonnement TV en ligne au Maroc',
-    title: 'Abonnement TV Maroc | Stramify essai 24h',
-    description: 'Découvrez une solution TV en ligne au Maroc avec essai 24h, activation rapide, support WhatsApp et compatibilité Smart TV, Android TV, Firestick, mobile et PC.',
+    h1: 'Abonnement TV Maroc avec packs flexibles',
+    title: 'Abonnement TV Maroc - Packs flexibles | Stramify',
+    description: 'Comparez nos packs d’abonnement TV au Maroc avec assistance d’installation, support WhatsApp et utilisation sur 1 appareil à la fois.',
     eyebrow: 'Guide Maroc',
     intro: 'Stramify accompagne les utilisateurs au Maroc qui recherchent une solution TV en ligne simple, claire et compatible avec leurs appareils du quotidien.',
     sections: [
@@ -1159,9 +1471,9 @@ const seoPages = {
     ],
   },
   '/iptv-maroc': {
-    h1: 'IPTV Maroc : solution TV en ligne claire et accompagnée',
-    title: 'IPTV Maroc | Solution TV en ligne Stramify',
-    description: 'Stramify présente une alternative TV en ligne pour les recherches IPTV Maroc, avec essai 24h, activation WhatsApp et assistance d’installation.',
+    h1: 'IPTV Maroc : abonnement simple et rapide',
+    title: 'IPTV Maroc - Abonnement simple et rapide | Stramify',
+    description: 'Profitez d’un abonnement IPTV au Maroc avec chaînes en direct, films, séries, qualité HD/4K selon disponibilité et accompagnement WhatsApp.',
     eyebrow: 'Recherche IPTV Maroc',
     intro: 'Le terme IPTV Maroc est souvent utilisé par les internautes pour chercher une solution TV en ligne. Stramify préfère une approche professionnelle, transparente et centrée sur la compatibilité.',
     sections: [
@@ -1179,9 +1491,9 @@ const seoPages = {
     ],
   },
   '/iptv-4k-maroc': {
-    h1: 'IPTV 4K Maroc : regarder en HD, Full HD ou 4K selon compatibilité',
-    title: 'IPTV 4K Maroc | Qualité HD et 4K avec Stramify',
-    description: 'Informations sur la qualité HD, Full HD et 4K pour une solution TV en ligne au Maroc compatible Smart TV, Android TV, Firestick et PC.',
+    h1: 'IPTV 4K Maroc : qualité HD et 4K selon disponibilité',
+    title: 'IPTV 4K Maroc - Qualité HD et 4K selon disponibilité | Stramify',
+    description: 'Découvrez une expérience IPTV avec qualité HD, Full HD et 4K selon disponibilité, compatible avec Smart TV, Android TV et autres appareils.',
     eyebrow: 'Qualité image',
     intro: 'La qualité 4K attire beaucoup d’utilisateurs, mais elle dépend toujours de plusieurs facteurs : connexion, appareil, application compatible et disponibilité technique.',
     sections: [
@@ -1199,9 +1511,9 @@ const seoPages = {
     ],
   },
   '/iptv-tanger': {
-    h1: 'Abonnement TV en ligne à Tanger',
-    title: 'IPTV Tanger | Abonnement TV en ligne Stramify',
-    description: 'Solution TV en ligne à Tanger avec essai 24h via WhatsApp, activation rapide et support pour Smart TV, Android TV, Firestick, mobile et PC.',
+    h1: 'IPTV Tanger avec support WhatsApp',
+    title: 'IPTV Tanger - Abonnement avec support WhatsApp | Stramify',
+    description: 'Découvrez Stramify à Tanger : abonnement IPTV, assistance WhatsApp, installation accompagnée et packs adaptés à vos besoins.',
     eyebrow: 'Tanger',
     intro: 'À Tanger, les usages TV varient entre appartements modernes, maisons familiales et utilisateurs mobiles. Stramify accompagne cette diversité avec un service simple à tester.',
     sections: [
@@ -1219,9 +1531,9 @@ const seoPages = {
     ],
   },
   '/iptv-casablanca': {
-    h1: 'Abonnement TV en ligne à Casablanca',
-    title: 'IPTV Casablanca | Stramify TV en ligne',
-    description: 'Abonnement TV en ligne à Casablanca pour familles, appartements et utilisateurs connectés, avec essai 24h, support WhatsApp et activation rapide.',
+    h1: 'IPTV Casablanca simple et rapide',
+    title: 'IPTV Casablanca - Abonnement simple et rapide | Stramify',
+    description: 'Stramify propose un abonnement IPTV à Casablanca avec support WhatsApp, installation accompagnée et plusieurs packs disponibles.',
     eyebrow: 'Casablanca',
     intro: 'À Casablanca, les usages TV sont urbains, rapides et souvent partagés entre plusieurs membres du foyer. Stramify aide à choisir une configuration adaptée.',
     sections: [
@@ -1239,9 +1551,9 @@ const seoPages = {
     ],
   },
   '/iptv-rabat': {
-    h1: 'Abonnement TV en ligne à Rabat',
-    title: 'IPTV Rabat | Abonnement TV en ligne Stramify',
-    description: 'Solution TV en ligne à Rabat avec support WhatsApp, activation rapide, guide d’installation et compatibilité Smart TV, Android TV, Firestick et PC.',
+    h1: 'IPTV Rabat avec assistance WhatsApp',
+    title: 'IPTV Rabat - Abonnement IPTV avec assistance | Stramify',
+    description: 'Profitez d’un abonnement IPTV à Rabat avec Stramify, support WhatsApp, installation accompagnée et qualité HD/4K selon disponibilité.',
     eyebrow: 'Rabat',
     intro: 'À Rabat, Stramify accompagne les foyers qui cherchent une expérience TV stable, responsable et facile à configurer.',
     sections: [
@@ -1259,9 +1571,9 @@ const seoPages = {
     ],
   },
   '/iptv-marrakech': {
-    h1: 'Abonnement TV en ligne à Marrakech',
-    title: 'IPTV Marrakech | Stramify TV en ligne',
-    description: 'Abonnement TV en ligne à Marrakech pour maisons, appartements, riads et familles, avec essai 24h, activation WhatsApp et installation guidée.',
+    h1: 'IPTV Marrakech avec support et installation guidée',
+    title: 'IPTV Marrakech - Abonnement IPTV avec support | Stramify',
+    description: 'Stramify accompagne les clients à Marrakech avec des packs IPTV simples, une assistance WhatsApp et une installation guidée.',
     eyebrow: 'Marrakech',
     intro: 'À Marrakech, les usages TV concernent aussi bien les familles, les appartements modernes, les riads que les utilisateurs qui veulent une installation simple.',
     sections: [
@@ -1279,9 +1591,9 @@ const seoPages = {
     ],
   },
   '/tarifs': {
-    h1: 'Tarifs Stramify',
-    title: 'Tarifs Stramify | Abonnement TV Maroc',
-    description: 'Comparez les packs Stramify 6 mois, 12 mois, Premium et VIP. Essai 24h via WhatsApp, activation rapide et assistance installation.',
+    h1: 'Tarifs IPTV Maroc : packs Stramify',
+    title: 'Tarifs IPTV Maroc - Packs 6 mois, 12 mois, Premium et VIP | Stramify',
+    description: 'Consultez les tarifs Stramify au Maroc : pack 6 mois, 12 mois, Premium et VIP avec support WhatsApp et utilisation sur 1 appareil à la fois.',
     eyebrow: 'Tarifs',
     intro: 'Comparez les forfaits Stramify selon votre durée, votre connexion Internet et vos besoins d’assistance.',
     sections: [
@@ -1296,9 +1608,9 @@ const seoPages = {
     ],
   },
   '/comparatif-offres': {
-    h1: 'Comparatif des offres Stramify',
-    title: 'Comparatif offres Stramify | 6 mois 12 mois Premium VIP',
-    description: 'Comparez les offres Stramify 6 mois, 12 mois, Premium et VIP pour choisir un abonnement TV en ligne adapté à votre usage au Maroc.',
+    h1: 'Comparatif offres IPTV Maroc',
+    title: 'Comparatif offres IPTV Maroc - Choisir le bon pack | Stramify',
+    description: 'Comparez les packs Stramify et choisissez l’abonnement IPTV le plus adapté à vos besoins, votre budget et votre usage.',
     eyebrow: 'Comparatif',
     intro: 'Ce comparatif explique les différences entre les forfaits Stramify sans promesse exagérée.',
     sections: [
@@ -1491,6 +1803,155 @@ const seoPagesAr = {
   },
 };
 
+const seoPagesEn = {
+  '/abonnement-tv-maroc': {
+    h1: 'TV subscription Morocco with flexible packs',
+    title: 'TV Subscription Morocco - Flexible Packs | Stramify',
+    description: 'Compare Stramify TV subscription packs in Morocco with installation assistance, WhatsApp support and use on 1 device at a time.',
+    eyebrow: 'Morocco guide',
+    intro: 'Stramify helps visitors in Morocco choose a clear TV subscription alternative with guided setup, realistic quality expectations and WhatsApp support.',
+    sections: [
+      ['A practical TV subscription alternative', [
+        'A TV subscription in Morocco should be easy to understand before activation. Stramify focuses on clear pack information, a 24h WhatsApp trial and setup help for common devices such as Smart TV, Android TV, Firestick, mobile and PC.',
+        'Content and channels may vary depending on the provider, country and broadcasting rights. That is why Stramify explains availability carefully and helps you test compatibility before choosing a pack.',
+      ]],
+      ['How to choose your pack', [
+        'The right pack depends on duration, content needs, connection quality and how much support you want. Every pack is used on 1 device at a time, so the decision should focus on service level and comfort rather than device count.',
+        'You can compare pricing, read the installation guide and contact support on WhatsApp if you want a recommendation before activation.',
+      ]],
+    ],
+  },
+  '/iptv-maroc': {
+    h1: 'IPTV Morocco subscription with simple activation',
+    title: 'IPTV Morocco - Simple and Fast Subscription | Stramify',
+    description: 'Enjoy an IPTV subscription in Morocco with live channels, movies, series, HD/4K quality depending on availability and WhatsApp assistance.',
+    eyebrow: 'IPTV Morocco',
+    intro: 'IPTV Morocco is a common search for users who want TV access through the internet with help for setup, pricing and compatibility.',
+    sections: [
+      ['What Stramify offers', [
+        'Stramify provides a clear IPTV subscription experience for Morocco with WhatsApp support, installation guidance and realistic information about quality and availability.',
+        'The service is designed for users who want to test first, understand the pack options and configure their device without confusing steps.',
+      ]],
+      ['Useful before you subscribe', [
+        'Before choosing a pack, check your connection, device compatibility and expected quality. HD, Full HD and 4K depend on availability, connection and the selected setup.',
+        'Use the pricing page, installation guide and FAQ to understand the service, then contact Stramify on WhatsApp for support.',
+      ]],
+    ],
+  },
+  '/iptv-4k-maroc': {
+    h1: 'IPTV 4K Morocco with HD and 4K availability',
+    title: 'IPTV 4K Morocco - HD and 4K Quality Depending on Availability | Stramify',
+    description: 'Discover an IPTV experience with HD, Full HD and 4K quality depending on availability, compatible with Smart TV, Android TV and other devices.',
+    eyebrow: 'Picture quality',
+    intro: 'IPTV 4K Morocco searches usually come from users who want sharper image quality on Smart TV, Android TV or similar devices.',
+    sections: [
+      ['Quality depends on setup', [
+        'A good 4K experience depends on your internet connection, device, compatible app and content availability. Stramify explains quality as HD, Full HD or 4K depending on availability and compatibility.',
+        'The 24h trial helps you test real conditions before choosing a pack. This is more useful than relying on a general promise that may not match your setup.',
+      ]],
+      ['How to prepare for better quality', [
+        'Use a stable connection, keep the device updated and ask support for installation help if playback is not smooth. WhatsApp support can guide you through the basic checks.',
+      ]],
+    ],
+  },
+  '/iptv-tanger': {
+    h1: 'IPTV Tangier with WhatsApp support',
+    title: 'IPTV Tangier - Subscription with WhatsApp Support | Stramify',
+    description: 'Discover Stramify in Tangier: IPTV subscription, WhatsApp assistance, guided installation and packs adapted to your needs.',
+    eyebrow: 'Tangier',
+    intro: 'Stramify supports users in Tangier who want a simple IPTV subscription with clear pricing and installation help.',
+    sections: [
+      ['For homes and apartments in Tangier', [
+        'Users in Tangier may rely on fiber, ADSL, 4G or shared Wi-Fi, so testing is important. Stramify helps you check compatibility with Smart TV, Android TV, Firestick, mobile or PC.',
+        'Every pack is used on 1 device at a time. You can compare the packs, request a 24h trial and contact WhatsApp support for setup help.',
+      ]],
+      ['Local support flow', [
+        'Send your device type on WhatsApp, follow the installation steps and verify playback quality before choosing the pack that fits your use.',
+      ]],
+    ],
+  },
+  '/iptv-casablanca': {
+    h1: 'IPTV Casablanca with simple activation',
+    title: 'IPTV Casablanca - Simple and Fast Subscription | Stramify',
+    description: 'Stramify offers an IPTV subscription in Casablanca with WhatsApp support, guided installation and several available packs.',
+    eyebrow: 'Casablanca',
+    intro: 'In Casablanca, users often want quick setup, clear pricing and support for Smart TV, Android TV, Firestick, mobile or PC.',
+    sections: [
+      ['A clear IPTV option in Casablanca', [
+        'Stramify helps Casablanca customers test compatibility, understand pack differences and activate through WhatsApp. Quality depends on the connection, device and availability.',
+        'The service is suitable for users who want guidance before paying and prefer a simple support flow.',
+      ]],
+      ['Choose with confidence', [
+        'Use the pricing and comparison pages to choose by duration, content level and support needs. Each pack is used on 1 device at a time.',
+      ]],
+    ],
+  },
+  '/iptv-rabat': {
+    h1: 'IPTV Rabat with installation assistance',
+    title: 'IPTV Rabat - IPTV Subscription with Assistance | Stramify',
+    description: 'Enjoy an IPTV subscription in Rabat with Stramify, WhatsApp support, guided installation and HD/4K quality depending on availability.',
+    eyebrow: 'Rabat',
+    intro: 'Stramify helps viewers in Rabat set up an IPTV subscription with guided support and realistic quality expectations.',
+    sections: [
+      ['Home entertainment in Rabat', [
+        'A stable IPTV experience depends on your connection, device and configuration. Stramify support helps you prepare the device and understand the available packs.',
+        'Before choosing, you can request a 24h trial and use WhatsApp support for setup questions.',
+      ]],
+      ['What to expect', [
+        'Content and channels may vary by provider, country and rights. Every pack is used on 1 device at a time and is explained before activation.',
+      ]],
+    ],
+  },
+  '/iptv-marrakech': {
+    h1: 'IPTV Marrakech with support and guided setup',
+    title: 'IPTV Marrakech - IPTV Subscription with Support | Stramify',
+    description: 'Stramify supports customers in Marrakech with simple IPTV packs, WhatsApp assistance and guided installation.',
+    eyebrow: 'Marrakech',
+    intro: 'Stramify helps Marrakech users choose an IPTV pack, test compatibility and configure the selected device.',
+    sections: [
+      ['For homes, apartments and riads', [
+        'Connection quality can vary in Marrakech depending on the building, router position and device. A 24h trial helps you test real playback before choosing a pack.',
+        'Support can guide Smart TV, Android TV, Firestick, mobile and PC setup. Every pack is used on 1 device at a time.',
+      ]],
+      ['Compare before activation', [
+        'Review the pricing page and contact Stramify on WhatsApp if you need help choosing between 6-month, 12-month, Premium and VIP packs.',
+      ]],
+    ],
+  },
+  '/tarifs': {
+    h1: 'IPTV Morocco pricing for Stramify packs',
+    title: 'IPTV Morocco Pricing - 6-month, 12-month, Premium and VIP Packs | Stramify',
+    description: 'View Stramify pricing in Morocco: 6-month, 12-month, Premium and VIP packs with WhatsApp support and use on 1 device at a time.',
+    eyebrow: 'Pricing',
+    intro: 'Compare Stramify packs by duration, content level, support needs and connection quality.',
+    sections: [
+      ['How to compare packs', [
+        'The best pack is not only about price. Consider duration, expected quality, content level and how much assistance you want. Every Stramify pack is used on 1 device at a time.',
+        'Pack 6 months is useful to discover the service. Pack 12 months is balanced for the year. Premium and VIP add more comfort and support.',
+      ]],
+      ['Why request the 24h trial', [
+        'The trial helps you check device compatibility, connection quality and ease of use before selecting a pack.',
+      ]],
+    ],
+  },
+  '/comparatif-offres': {
+    h1: 'IPTV Morocco offer comparison',
+    title: 'IPTV Morocco Offer Comparison - Choose the Right Pack | Stramify',
+    description: 'Compare Stramify packs and choose the IPTV subscription that best fits your needs, budget and usage.',
+    eyebrow: 'Comparison',
+    intro: 'This comparison helps you understand the differences between Stramify packs without unrealistic claims.',
+    sections: [
+      ['6-month, 12-month, Premium or VIP', [
+        'The 6-month pack is a simple entry point. The 12-month pack is a practical yearly choice. Premium and VIP focus on richer content selection and stronger support.',
+        'All packs are used on 1 device at a time. Choose based on duration, expected quality, content needs and support level.',
+      ]],
+      ['Compare before contacting support', [
+        'Review pricing, installation and FAQ pages, then contact Stramify on WhatsApp if you want help choosing the right pack.',
+      ]],
+    ],
+  },
+};
+
 const legalPages = {
   '/politique-de-confidentialite': {
     h1: 'Politique de confidentialité',
@@ -1546,21 +2007,21 @@ const legalPagesAr = {
 };
 
 function getRoute(path, lang) {
-  const pages = lang === 'ar' ? seoPagesAr : seoPages;
+  const pages = lang === 'ar' ? seoPagesAr : lang === 'en' ? seoPagesEn : seoPages;
   const legal = lang === 'ar' ? legalPagesAr : legalPages;
   const routeMeta = {
     fr: {
       installation: {
-        title: 'Guide d’installation Stramify',
-        description: 'Guide d’installation Stramify sur Smart TV, Android TV, Firestick, téléphone Android, iPhone, iPad et PC.',
+        title: 'Installation IPTV Smart TV Maroc - Aide et support | Stramify',
+        description: 'Besoin d’aide pour installer votre abonnement IPTV sur Smart TV, Android TV ou mobile ? Stramify vous accompagne étape par étape via WhatsApp.',
       },
       faq: {
-        title: 'FAQ Stramify | Questions fréquentes',
-        description: 'Réponses aux questions fréquentes Stramify : essai 24h, activation, appareils compatibles, paiement, installation et support.',
+        title: 'FAQ IPTV Maroc - Questions fréquentes | Stramify',
+        description: 'Retrouvez les réponses aux questions fréquentes sur l’abonnement IPTV Stramify, les tarifs, l’installation, les appareils compatibles et le support.',
       },
       contact: {
-        title: 'Contact Stramify | WhatsApp support',
-        description: 'Contactez Stramify sur WhatsApp pour l’essai 24h, l’activation, le choix du forfait et l’installation.',
+        title: 'Contacter Stramify - Support WhatsApp IPTV Maroc',
+        description: 'Contactez Stramify via WhatsApp pour choisir votre abonnement, recevoir de l’aide ou demander une assistance d’installation.',
       },
     },
     ar: {
@@ -1575,6 +2036,20 @@ function getRoute(path, lang) {
       contact: {
         title: 'اتصل بنا | دعم Stramify عبر WhatsApp',
         description: 'تواصل مع Stramify عبر WhatsApp للتجربة، التفعيل، اختيار الباقة والتثبيت.',
+      },
+    },
+    en: {
+      installation: {
+        title: 'IPTV Smart TV Installation Morocco - Help and Support | Stramify',
+        description: 'Need help installing your IPTV subscription on Smart TV, Android TV or mobile? Stramify guides you step by step via WhatsApp.',
+      },
+      faq: {
+        title: 'IPTV Morocco FAQ - Frequent Questions | Stramify',
+        description: 'Find answers about Stramify IPTV subscription, pricing, installation, compatible devices and support.',
+      },
+      contact: {
+        title: 'Contact Stramify - WhatsApp IPTV Morocco Support',
+        description: 'Contact Stramify on WhatsApp to choose your pack, get help or request installation assistance.',
       },
     },
   }[lang];
@@ -1592,7 +2067,8 @@ function getRoute(path, lang) {
 function App() {
   const [lang, setLang] = useState(() => {
     if (typeof window === 'undefined') return 'fr';
-    return localStorage.getItem('stramify-lang') === 'ar' ? 'ar' : 'fr';
+    const savedLang = localStorage.getItem('stramify-lang');
+    return ['fr', 'ar', 'en'].includes(savedLang) ? savedLang : 'fr';
   });
   const [path, setPath] = useState(() => window.location.pathname);
   const t = translations[lang];
@@ -1631,7 +2107,7 @@ function App() {
     if (route.type === 'faq') return <FaqPage lang={lang} t={t} />;
     if (route.type === 'contact') return <ContactPage lang={lang} t={t} />;
     if (route.type === 'pricing') return <TarifsPage lang={lang} t={t} page={route.page} />;
-    return <SeoPage page={route.page} lang={lang} t={t} />;
+    return <SeoPage page={route.page} lang={lang} t={t} path={path} />;
   }, [lang, route, t]);
 
   return (
